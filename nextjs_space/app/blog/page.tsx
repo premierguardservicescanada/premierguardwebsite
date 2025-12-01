@@ -33,6 +33,14 @@ export default function BlogPage() {
       {/* Hero Section */}
       <section ref={heroRef} className="bg-slate-900 py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.h2
+            initial="hidden"
+            animate={heroInView ? 'visible' : 'hidden'}
+            variants={fadeInUp}
+            className="text-2xl md:text-3xl font-bold mb-4 text-amber-500 tracking-wide"
+          >
+            PREMIER GUARD SERVICES
+          </motion.h2>
           <motion.h1
             initial="hidden"
             animate={heroInView ? 'visible' : 'hidden'}

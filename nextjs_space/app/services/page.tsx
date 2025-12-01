@@ -121,6 +121,14 @@ export default function ServicesPage() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 py-20 text-center">
+          <motion.h2
+            initial="hidden"
+            animate={heroInView ? 'visible' : 'hidden'}
+            variants={fadeInUp}
+            className="text-2xl md:text-3xl font-bold mb-4 text-amber-500 tracking-wide"
+          >
+            PREMIER GUARD SERVICES
+          </motion.h2>
           <motion.h1
             initial="hidden"
             animate={heroInView ? 'visible' : 'hidden'}

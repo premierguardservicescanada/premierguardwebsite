@@ -52,13 +52,13 @@ export default function HomePage() {
       <section ref={heroRef} className="relative min-h-[90vh] flex items-center justify-center bg-slate-900">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://cdn.abacus.ai/images/280a002e-369b-44af-8ab2-ce1c148b8bd3.png"
-            alt="Professional security guard at upscale venue"
+            src="https://cdn.abacus.ai/images/f41a7422-4331-46c2-a872-30fbdc85291c.png"
+            alt="Premier Guard Services professional security team"
             fill
             className="object-cover opacity-40"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/50 to-slate-950" />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center">
@@ -68,16 +68,25 @@ export default function HomePage() {
             variants={fadeInUp}
             className="mb-8"
           >
-            <div className="relative w-80 h-40 md:w-[32rem] md:h-48 mx-auto mb-8">
+            <div className="relative w-96 h-48 md:w-[40rem] md:h-60 mx-auto mb-8">
               <Image
                 src="https://cdn.abacus.ai/images/fbb7dfc1-475e-418b-b3ad-bef404ca9384.png"
                 alt="Premier Guard Services Corp Logo"
                 fill
-                className="object-contain"
+                className="object-contain drop-shadow-2xl"
                 priority
               />
             </div>
           </motion.div>
+
+          <motion.h2
+            initial="hidden"
+            animate={heroInView ? 'visible' : 'hidden'}
+            variants={fadeInUp}
+            className="text-3xl md:text-4xl font-bold mb-4 text-amber-500 tracking-wide"
+          >
+            PREMIER GUARD SERVICES
+          </motion.h2>
 
           <motion.h1
             initial="hidden"
