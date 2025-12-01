@@ -130,6 +130,15 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Company Name Banner */}
+      <section className="bg-black py-12">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-widest">
+            PREMIER GUARD SERVICES
+          </h2>
+        </div>
+      </section>
+
       {/* Key Differentiators */}
       <section className="bg-slate-900 py-16">
         <div className="max-w-7xl mx-auto px-6">
@@ -184,32 +193,32 @@ export default function HomePage() {
               {
                 title: 'Private Event Security',
                 desc: 'Professional security for corporate events, weddings, concerts, and private functions',
-                image: 'https://cdn.abacus.ai/images/87a0f03f-8198-4431-84dd-8d24db9beb52.png'
+                image: 'https://cdn.abacus.ai/images/85bae8af-6026-43b4-9d5e-c9e3134a2319.png'
               },
               {
                 title: 'Retail Security',
                 desc: 'Loss prevention and customer safety for retail environments',
-                image: 'https://cdn.abacus.ai/images/c0ce5915-fdc0-4364-b7b6-e8faf2a332d2.png'
+                image: 'https://cdn.abacus.ai/images/733c7fe2-e931-4b45-9fc6-3cf39f8e4815.png'
               },
               {
                 title: 'Construction Site Security',
                 desc: '24/7 site protection and access control for construction projects',
-                image: 'https://cdn.abacus.ai/images/c2fbc862-114f-4e8c-8542-6ac0d8fbb62c.png'
+                image: 'https://cdn.abacus.ai/images/5fcf3f94-6333-49f6-8cce-ab10f1a495a9.png'
               },
               {
                 title: 'Mobile Patrol',
                 desc: 'Regular patrol services for multiple locations and properties',
-                image: 'https://cdn.abacus.ai/images/ced8e45b-2cd6-45ed-9d6c-ce9bcd4fbf8e.png'
+                image: 'https://cdn.abacus.ai/images/7eb30b6c-21fc-4d26-9d7f-894ca98389ee.png'
               },
               {
                 title: 'Concierge Security',
                 desc: 'Professional reception and access control for buildings',
-                image: 'https://cdn.abacus.ai/images/f8b93c6f-67ec-4487-ae42-5c03e00ea495.png'
+                image: 'https://cdn.abacus.ai/images/d75a4be0-0a0c-4400-a924-05186f1dec6b.png'
               },
               {
                 title: '24/7 Coverage',
                 desc: 'Round-the-clock protection services whenever you need them',
-                image: 'https://cdn.abacus.ai/images/4031161c-98cd-42f6-ab0e-53a084312d27.png'
+                image: 'https://cdn.abacus.ai/images/800a6277-2773-4bc3-9fb9-ab2b65e25236.png'
               }
             ].map((service, idx) => (
               <motion.div
@@ -275,8 +284,8 @@ export default function HomePage() {
               className="relative aspect-video rounded-lg overflow-hidden shadow-2xl"
             >
               <Image
-                src="https://cdn.abacus.ai/images/721e657d-ab0c-4fe2-8887-5a1b8604223e.png"
-                alt="Professional security team"
+                src="https://cdn.abacus.ai/images/8ff174d6-7a50-463f-99b8-7f2fd58a3614.png"
+                alt="Professional security team with PREMIER GUARD uniforms"
                 fill
                 className="object-cover"
               />
