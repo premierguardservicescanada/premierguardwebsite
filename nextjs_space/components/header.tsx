@@ -20,15 +20,16 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 shadow-lg">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24 md:h-28">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="relative w-40 h-12">
+            <div className="relative w-64 h-20 md:w-80 md:h-24">
               <Image
                 src="https://cdn.abacus.ai/images/fbb7dfc1-475e-418b-b3ad-bef404ca9384.png"
                 alt="Premier Guard Services"
                 fill
                 className="object-contain"
+                priority
               />
             </div>
           </Link>

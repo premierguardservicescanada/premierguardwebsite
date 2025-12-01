@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <div className="relative w-48 h-16 mb-4">
+            <div className="relative w-72 h-24 mb-4">
               <Image
                 src="https://cdn.abacus.ai/images/fbb7dfc1-475e-418b-b3ad-bef404ca9384.png"
                 alt="Premier Guard Services"
@@ -20,10 +20,10 @@ export default function Footer() {
               />
             </div>
             <p className="text-slate-400 mb-4">
-              Professional security services across Toronto and the Greater Toronto Area.
+              Luxury professional security services across Canada.
             </p>
             <a
-              href="https://www.instagram.com/premierguardservices?igsh=aGRpNHR2ZGcxcHQz&utm_source=qr"
+              href="https://www.instagram.com/premierguardservices/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-amber-500 hover:text-amber-400 transition-colors"
@@ -85,16 +85,16 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@premierguardservices.ca"
+                  href="mailto:Premierguardservicescorp@gmail.com"
                   className="flex items-center gap-2 text-slate-400 hover:text-amber-500 transition-colors"
                 >
                   <Mail className="w-5 h-5 flex-shrink-0" />
-                  <span>info@premierguardservices.ca</span>
+                  <span className="break-all">Premierguardservicescorp@gmail.com</span>
                 </a>
               </li>
               <li className="flex items-start gap-2 text-slate-400">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-1" />
-                <span>Serving Toronto & GTA</span>
+                <span>Serving in Canada</span>
               </li>
             </ul>
           </div>

@@ -8,16 +8,16 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXTAUTH_URL || 'http://localhost:3000'),
-  title: 'Premier Guard Services Corp. - Professional Security Services in Toronto & GTA',
-  description: 'Licensed and professional security services for events, retail, construction, and more. 24/7 coverage across Toronto and the Greater Toronto Area. Your safety, our priority.',
-  keywords: ['security services', 'Toronto security', 'GTA security', 'event security', 'retail security', 'construction security', 'mobile patrol'],
+  title: 'Premier Guard Services Corp. - Luxury Professional Security Services in Canada',
+  description: 'Luxury licensed and professional security services for events, retail, construction, and more. 24/7 coverage across Canada. Your safety, our priority.',
+  keywords: ['security services', 'Canada security', 'luxury security', 'event security', 'retail security', 'construction security', 'mobile patrol'],
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.svg',
   },
   openGraph: {
-    title: 'Premier Guard Services Corp. - Professional Security in Toronto & GTA',
-    description: 'Licensed security services for events, retail, construction, and more. 24/7 professional coverage.',
+    title: 'Premier Guard Services Corp. - Luxury Professional Security in Canada',
+    description: 'Luxury licensed security services for events, retail, construction, and more. 24/7 professional coverage.',
     images: ['/og-image.png'],
     type: 'website',
   },

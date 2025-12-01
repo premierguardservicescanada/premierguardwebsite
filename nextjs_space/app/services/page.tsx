@@ -26,7 +26,7 @@ const services = [
       'Emergency response protocols',
       'Professional appearance and conduct'
     ],
-    image: 'https://cdn.abacus.ai/images/87a0f03f-8198-4431-84dd-8d24db9beb52.png'
+    image: 'https://cdn.abacus.ai/images/3ee938cd-50b5-4373-b237-7d0050b86dfb.png'
   },
   {
     icon: ShoppingBag,
@@ -38,7 +38,7 @@ const services = [
       'Theft deterrence and detection',
       'Incident documentation and reporting'
     ],
-    image: 'https://cdn.abacus.ai/images/c0ce5915-fdc0-4364-b7b6-e8faf2a332d2.png'
+    image: 'https://cdn.abacus.ai/images/5397a2d2-dd3b-4139-8195-9c52a1e846b9.png'
   },
   {
     icon: HardHat,
@@ -50,7 +50,7 @@ const services = [
       'Equipment and material protection',
       'Regular patrol and inspection'
     ],
-    image: 'https://cdn.abacus.ai/images/c2fbc862-114f-4e8c-8542-6ac0d8fbb62c.png'
+    image: 'https://cdn.abacus.ai/images/03ec20db-4014-45af-a219-5daaf24d1ad8.png'
   },
   {
     icon: Car,
@@ -62,7 +62,7 @@ const services = [
       'Property checks and lock-ups',
       'Detailed patrol reports'
     ],
-    image: 'https://cdn.abacus.ai/images/ced8e45b-2cd6-45ed-9d6c-ce9bcd4fbf8e.png'
+    image: 'https://cdn.abacus.ai/images/3043adc6-566d-4233-b6ce-538d7107e082.png'
   },
   {
     icon: Building2,
@@ -74,7 +74,7 @@ const services = [
       'Package handling and delivery',
       'Building access control'
     ],
-    image: 'https://cdn.abacus.ai/images/f8b93c6f-67ec-4487-ae42-5c03e00ea495.png'
+    image: 'https://cdn.abacus.ai/images/4facb334-6be4-4371-9d2a-d7cf9b02c5d7.png'
   },
   {
     icon: Zap,
@@ -86,7 +86,7 @@ const services = [
       'Flexible duration options',
       'Crisis management support'
     ],
-    image: 'https://cdn.abacus.ai/images/037aaad5-e15a-47d1-8756-a65b489b03ef.png'
+    image: 'https://cdn.abacus.ai/images/b6c6fa5d-c2ad-4a90-8b2f-e38877fc1194.png'
   },
   {
     icon: Clock,
@@ -98,7 +98,7 @@ const services = [
       'Holiday and weekend availability',
       'Consistent quality across all shifts'
     ],
-    image: 'https://cdn.abacus.ai/images/4031161c-98cd-42f6-ab0e-53a084312d27.png'
+    image: 'https://cdn.abacus.ai/images/2d42ac1c-65f5-40ee-963c-66089cbf2786.png'
   }
 ]
 
@@ -135,7 +135,7 @@ export default function ServicesPage() {
             variants={fadeInUp}
             className="text-xl text-slate-300 max-w-2xl mx-auto"
           >
-            Comprehensive security solutions tailored to meet your specific needs across Toronto and the GTA
+            Comprehensive luxury security solutions tailored to meet your specific needs across Canada
           </motion.p>
         </div>
       </section>

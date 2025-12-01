@@ -50,7 +50,7 @@ export default function AboutPage() {
             variants={fadeInUp}
             className="text-xl text-slate-300 max-w-2xl mx-auto"
           >
-            Dedicated to providing professional, reliable, and affordable security services across Toronto and the GTA
+            Dedicated to providing luxury professional, reliable, and affordable security services across Canada
           </motion.p>
         </div>
       </section>
@@ -74,7 +74,7 @@ export default function AboutPage() {
                 We understand that safety and security are not just services—they're fundamental needs. That's why we've built our company on a foundation of professionalism, reliability, and unwavering commitment to excellence.
               </p>
               <p className="text-lg text-slate-300">
-                As a locally-operated company serving Toronto and the Greater Toronto Area, we take pride in being accessible, responsive, and personally invested in every client's security needs.
+                As a locally-operated company serving across Canada, we take pride in being accessible, responsive, and personally invested in every client's security needs.
               </p>
             </motion.div>
 
@@ -123,13 +123,13 @@ export default function AboutPage() {
                 Our <span className="text-amber-500">Story</span>
               </h2>
               <p className="text-lg text-slate-300 mb-4">
-                Premier Guard Services Corp. was founded with a clear vision: to fill the gap in the Toronto security market for a company that combines professional excellence with personalized service.
+                Premier Guard Services Corp. was founded with a clear vision: to fill the gap in the Canadian security market for a luxury company that combines professional excellence with personalized service.
               </p>
               <p className="text-lg text-slate-300 mb-4">
                 Our team brings years of experience in security operations, law enforcement, and customer service. We've seen firsthand what works—and what doesn't—in the security industry.
               </p>
               <p className="text-lg text-slate-300">
-                Today, we're proud to serve a diverse range of clients across the GTA, from small businesses to large corporate events, construction sites to retail establishments. Every client receives the same commitment to excellence and personalized attention.
+                Today, we're proud to serve a diverse range of clients across Canada, from small businesses to large corporate events, construction sites to retail establishments. Every client receives the same commitment to excellence and personalized attention.
               </p>
             </motion.div>
           </div>

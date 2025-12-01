@@ -118,10 +118,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold text-white mb-1">Email</h3>
                     <a
-                      href="mailto:info@premierguardservices.ca"
-                      className="text-amber-500 hover:text-amber-400 transition-colors"
+                      href="mailto:Premierguardservicescorp@gmail.com"
+                      className="text-amber-500 hover:text-amber-400 transition-colors break-all"
                     >
-                      info@premierguardservices.ca
+                      Premierguardservicescorp@gmail.com
                     </a>
                     <p className="text-sm text-slate-400 mt-1">We'll respond within 24 hours</p>
                   </div>
@@ -133,8 +133,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-white mb-1">Service Area</h3>
-                    <p className="text-slate-300">Toronto & Greater Toronto Area</p>
-                    <p className="text-sm text-slate-400 mt-1">Serving all of the GTA</p>
+                    <p className="text-slate-300">Serving in Canada</p>
+                    <p className="text-sm text-slate-400 mt-1">Luxury security services nationwide</p>
                   </div>
                 </div>
 
@@ -145,7 +145,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold text-white mb-1">Social Media</h3>
                     <a
-                      href="https://www.instagram.com/premierguardservices?igsh=aGRpNHR2ZGcxcHQz&utm_source=qr"
+                      href="https://www.instagram.com/premierguardservices/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-amber-500 hover:text-amber-400 transition-colors"

@@ -68,7 +68,7 @@ export default function HomePage() {
             variants={fadeInUp}
             className="mb-8"
           >
-            <div className="relative w-64 h-32 mx-auto mb-8">
+            <div className="relative w-80 h-40 md:w-[32rem] md:h-48 mx-auto mb-8">
               <Image
                 src="https://cdn.abacus.ai/images/fbb7dfc1-475e-418b-b3ad-bef404ca9384.png"
                 alt="Premier Guard Services Corp Logo"
@@ -94,7 +94,7 @@ export default function HomePage() {
             variants={fadeInUp}
             className="text-xl md:text-2xl text-slate-300 mb-10 max-w-3xl mx-auto"
           >
-            Professional, licensed security services across Toronto and the GTA. 
+            Luxury professional, licensed security services across Canada. 
             Trusted protection for your events, properties, and peace of mind.
           </motion.p>
 
