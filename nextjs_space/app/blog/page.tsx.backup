@@ -31,13 +31,13 @@ export default function BlogPage() {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <section ref={heroRef} className="bg-black py-20">
+      <section ref={heroRef} className="bg-slate-900 py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.h2
             initial="hidden"
             animate={heroInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="text-2xl md:text-3xl font-elegant mb-4 text-luxury-gold tracking-wide"
+            className="text-2xl md:text-3xl font-bold mb-4 text-amber-500 tracking-wide"
           >
             PREMIER GUARD SERVICES
           </motion.h2>
@@ -45,15 +45,15 @@ export default function BlogPage() {
             initial="hidden"
             animate={heroInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="text-5xl md:text-6xl font-elegant mb-6 text-white"
+            className="text-5xl md:text-6xl font-bold mb-6 text-white"
           >
-            Security <span className="text-luxury-gold">Insights</span>
+            Security <span className="text-amber-500">Insights</span>
           </motion.h1>
           <motion.p
             initial="hidden"
             animate={heroInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="text-xl text-white/80"
+            className="text-xl text-slate-300"
           >
             Expert tips, industry insights, and security best practices from the Premier Guard team
           </motion.p>
@@ -61,7 +61,7 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Posts */}
-      <section ref={postsRef} className="bg-luxury-bg py-20">
+      <section ref={postsRef} className="bg-slate-950 py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-8">
             {blogPosts?.map?.((post, idx) => (
@@ -70,10 +70,10 @@ export default function BlogPage() {
                 initial="hidden"
                 animate={postsInView ? 'visible' : 'hidden'}
                 variants={fadeInUp}
-                className="group bg-black rounded-lg overflow-hidden border-[1.5px] border-luxury-gold hover:border-luxury-gold shadow-lg hover:shadow-2xl hover:shadow-amber-500/20 transition-all duration-300"
+                className="group bg-slate-900 rounded-lg overflow-hidden border border-slate-800 hover:border-amber-500 shadow-lg hover:shadow-2xl hover:shadow-amber-500/20 transition-all duration-300"
               >
                 <div className="grid md:grid-cols-5 gap-0">
-                  <div className="md:col-span-2 relative aspect-video md:aspect-[4/3] bg-luxury-dark">
+                  <div className="md:col-span-2 relative aspect-video md:aspect-[4/3] bg-slate-800">
                     <Image
                       src={post?.image ?? ''}
                       alt={post?.title ?? ''}
@@ -83,8 +83,8 @@ export default function BlogPage() {
                   </div>
 
                   <div className="md:col-span-3 p-8">
-                    <div className="flex items-center gap-4 mb-4 text-sm text-white/70">
-                      <span className="px-3 py-1 bg-luxury-gold/20 text-luxury-gold rounded-full border border-amber-600/30">
+                    <div className="flex items-center gap-4 mb-4 text-sm text-slate-400">
+                      <span className="px-3 py-1 bg-amber-600/20 text-amber-500 rounded-full border border-amber-600/30">
                         {post?.category ?? ''}
                       </span>
                       <div className="flex items-center gap-1">
@@ -95,24 +95,24 @@ export default function BlogPage() {
                     </div>
 
                     <Link href={`/blog/${post?.slug ?? ''}`}>
-                      <h2 className="text-2xl md:text-3xl font-elegant mb-4 text-luxury-gold group-hover:text-luxury-gold transition-colors font-elegant">
+                      <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white group-hover:text-amber-500 transition-colors">
                         {post?.title ?? ''}
                       </h2>
                     </Link>
 
-                    <p className="text-white/70 mb-6 line-clamp-2">
+                    <p className="text-slate-400 mb-6 line-clamp-2">
                       {post?.excerpt ?? ''}
                     </p>
 
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2 text-sm text-white/70">
+                      <div className="flex items-center gap-2 text-sm text-slate-400">
                         <User className="w-4 h-4" />
                         <span>{post?.author ?? ''}</span>
                       </div>
 
                       <Link
                         href={`/blog/${post?.slug ?? ''}`}
-                        className="inline-flex items-center gap-2 text-luxury-gold hover:text-amber-400 font-semibold transition-colors"
+                        className="inline-flex items-center gap-2 text-amber-500 hover:text-amber-400 font-semibold transition-colors"
                       >
                         Read More
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -129,15 +129,15 @@ export default function BlogPage() {
             initial="hidden"
             animate={postsInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="mt-12 text-center p-8 bg-black rounded-lg border-[1.5px] border-luxury-gold"
+            className="mt-12 text-center p-8 bg-slate-900 rounded-lg border border-slate-800"
           >
-            <p className="text-white/70 text-lg">
+            <p className="text-slate-400 text-lg">
               More security insights and tips coming soon. Follow us on{' '}
               <a
                 href="https://www.instagram.com/premierguardservices?igsh=aGRpNHR2ZGcxcHQz&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-luxury-gold hover:text-amber-400 transition-colors"
+                className="text-amber-500 hover:text-amber-400 transition-colors"
               >
                 Instagram
               </a>

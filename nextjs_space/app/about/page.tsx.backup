@@ -24,7 +24,7 @@ export default function AboutPage() {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-[60vh] flex items-center justify-center bg-black">
+      <section ref={heroRef} className="relative min-h-[60vh] flex items-center justify-center bg-slate-900">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://cdn.abacus.ai/images/721e657d-ab0c-4fe2-8887-5a1b8604223e.png"
@@ -32,7 +32,7 @@ export default function AboutPage() {
             fill
             className="object-cover opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-luxury-bg/70 via-luxury-bg/50 to-luxury-bg" />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/50 to-slate-950" />
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 py-20 text-center">
@@ -40,7 +40,7 @@ export default function AboutPage() {
             initial="hidden"
             animate={heroInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="text-2xl md:text-3xl font-elegant mb-4 text-luxury-gold tracking-wide"
+            className="text-2xl md:text-3xl font-bold mb-4 text-amber-500 tracking-wide"
           >
             PREMIER GUARD SERVICES
           </motion.h2>
@@ -48,15 +48,15 @@ export default function AboutPage() {
             initial="hidden"
             animate={heroInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="text-5xl md:text-6xl font-elegant mb-6 text-white"
+            className="text-5xl md:text-6xl font-bold mb-6 text-white"
           >
-            About <span className="text-luxury-gold">Our Company</span>
+            About <span className="text-amber-500">Our Company</span>
           </motion.h1>
           <motion.p
             initial="hidden"
             animate={heroInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="text-xl text-white/80 max-w-2xl mx-auto"
+            className="text-xl text-slate-300 max-w-2xl mx-auto"
           >
             Dedicated to providing luxury professional, reliable, and affordable security services across Canada
           </motion.p>
@@ -64,7 +64,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Section */}
-      <section ref={missionRef} className="bg-luxury-bg py-20">
+      <section ref={missionRef} className="bg-slate-950 py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -72,16 +72,16 @@ export default function AboutPage() {
               animate={missionInView ? 'visible' : 'hidden'}
               variants={fadeInUp}
             >
-              <h2 className="text-4xl font-elegant mb-6 text-luxury-gold font-elegant">
-                Our <span className="text-luxury-gold">Mission</span>
+              <h2 className="text-4xl font-bold mb-6 text-white">
+                Our <span className="text-amber-500">Mission</span>
               </h2>
-              <p className="text-lg text-white/80 mb-4">
+              <p className="text-lg text-slate-300 mb-4">
                 At Premier Guard Services Corp., our mission is simple yet powerful: to deliver exceptional security services that protect what matters most to our clients.
               </p>
-              <p className="text-lg text-white/80 mb-4">
+              <p className="text-lg text-slate-300 mb-4">
                 We understand that safety and security are not just services—they're fundamental needs. That's why we've built our company on a foundation of professionalism, reliability, and unwavering commitment to excellence.
               </p>
-              <p className="text-lg text-white/80">
+              <p className="text-lg text-slate-300">
                 As a locally-operated company serving across Canada, we take pride in being accessible, responsive, and personally invested in every client's security needs.
               </p>
             </motion.div>
@@ -104,7 +104,7 @@ export default function AboutPage() {
       </section>
 
       {/* Company Story */}
-      <section className="bg-black py-20">
+      <section className="bg-slate-900 py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -127,16 +127,16 @@ export default function AboutPage() {
               variants={fadeInUp}
               className="order-1 md:order-2"
             >
-              <h2 className="text-4xl font-elegant mb-6 text-luxury-gold font-elegant">
-                Our <span className="text-luxury-gold">Story</span>
+              <h2 className="text-4xl font-bold mb-6 text-white">
+                Our <span className="text-amber-500">Story</span>
               </h2>
-              <p className="text-lg text-white/80 mb-4">
+              <p className="text-lg text-slate-300 mb-4">
                 Premier Guard Services Corp. was founded with a clear vision: to fill the gap in the Canadian security market for a luxury company that combines professional excellence with personalized service.
               </p>
-              <p className="text-lg text-white/80 mb-4">
+              <p className="text-lg text-slate-300 mb-4">
                 Our team brings years of experience in security operations, law enforcement, and customer service. We've seen firsthand what works—and what doesn't—in the security industry.
               </p>
-              <p className="text-lg text-white/80">
+              <p className="text-lg text-slate-300">
                 Today, we're proud to serve a diverse range of clients across Canada, from small businesses to large corporate events, construction sites to retail establishments. Every client receives the same commitment to excellence and personalized attention.
               </p>
             </motion.div>
@@ -145,7 +145,7 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section ref={valuesRef} className="bg-luxury-bg py-20">
+      <section ref={valuesRef} className="bg-slate-950 py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial="hidden"
@@ -153,10 +153,10 @@ export default function AboutPage() {
             variants={fadeInUp}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-elegant mb-4 text-luxury-gold font-elegant">
-              Our Core <span className="text-luxury-gold">Values</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+              Our Core <span className="text-amber-500">Values</span>
             </h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
           </motion.div>
@@ -192,11 +192,11 @@ export default function AboutPage() {
               <motion.div
                 key={idx}
                 variants={fadeInUp}
-                className="bg-black p-8 rounded-lg border-[1.5px] border-luxury-gold hover:border-luxury-gold hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-300 text-center group"
+                className="bg-slate-900 p-8 rounded-lg border border-slate-800 hover:border-amber-500 hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-300 text-center group"
               >
-                <value.icon className="w-16 h-16 text-luxury-gold mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-elegant mb-3 text-luxury-gold font-elegant">{value.title}</h3>
-                <p className="text-white/70">{value.desc}</p>
+                <value.icon className="w-16 h-16 text-amber-500 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-bold mb-3 text-white">{value.title}</h3>
+                <p className="text-slate-400">{value.desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -204,7 +204,7 @@ export default function AboutPage() {
       </section>
 
       {/* Why Trust Us */}
-      <section ref={whyRef} className="bg-black py-20">
+      <section ref={whyRef} className="bg-slate-900 py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial="hidden"
@@ -212,10 +212,10 @@ export default function AboutPage() {
             variants={fadeInUp}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-elegant mb-4 text-luxury-gold font-elegant">
-              Why Clients <span className="text-luxury-gold">Trust Us</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+              Why Clients <span className="text-amber-500">Trust Us</span>
             </h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
               Experience the Premier Guard difference
             </p>
           </motion.div>
@@ -251,13 +251,13 @@ export default function AboutPage() {
               <motion.div
                 key={idx}
                 variants={fadeInUp}
-                className="bg-luxury-bg p-6 rounded-lg border-[1.5px] border-luxury-gold hover:border-luxury-gold transition-colors"
+                className="bg-slate-950 p-6 rounded-lg border border-slate-800 hover:border-amber-500 transition-colors"
               >
                 <div className="flex items-start gap-4">
-                  <item.icon className="w-12 h-12 text-luxury-gold flex-shrink-0" />
+                  <item.icon className="w-12 h-12 text-amber-500 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
-                    <p className="text-white/70">{item.desc}</p>
+                    <p className="text-slate-400">{item.desc}</p>
                   </div>
                 </div>
               </motion.div>
@@ -269,10 +269,10 @@ export default function AboutPage() {
             initial="hidden"
             animate={whyInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="bg-luxury-bg p-8 rounded-lg border-[1.5px] border-luxury-gold"
+            className="bg-slate-950 p-8 rounded-lg border border-slate-800"
           >
-            <h3 className="text-2xl font-elegant mb-6 text-center text-luxury-gold font-elegant">
-              Licenses & <span className="text-luxury-gold">Certifications</span>
+            <h3 className="text-2xl font-bold mb-6 text-center text-white">
+              Licenses & <span className="text-amber-500">Certifications</span>
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
@@ -283,10 +283,10 @@ export default function AboutPage() {
               ].map((cert, idx) => (
                 <div
                   key={idx}
-                  className="flex flex-col items-center gap-2 p-4 bg-black rounded-lg border border-luxury-gold/30"
+                  className="flex flex-col items-center gap-2 p-4 bg-slate-900 rounded-lg border border-slate-700"
                 >
-                  <CheckCircle2 className="w-8 h-8 text-luxury-gold" />
-                  <span className="text-sm text-center text-white/80">{cert}</span>
+                  <CheckCircle2 className="w-8 h-8 text-amber-500" />
+                  <span className="text-sm text-center text-slate-300">{cert}</span>
                 </div>
               ))}
             </div>
@@ -295,25 +295,25 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-black border-t border-b border-luxury-gold/20 py-20">
+      <section className="bg-gradient-to-r from-amber-600 to-amber-700 py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-elegant mb-6 text-luxury-gold font-elegant">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Ready to Work with a Security Partner You Can Trust?
           </h2>
-          <p className="text-xl text-white/80 mb-8">
+          <p className="text-xl text-amber-100 mb-8">
             Let's discuss your security needs and create a customized solution for you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/quote"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-luxury-gold font-semibold rounded-full-lg hover:bg-slate-100 transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-amber-600 font-semibold rounded-lg shadow-lg hover:bg-slate-100 transition-all duration-300"
             >
               Get Your Free Quote
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               href="/contact"
-              className="px-8 py-4 bg-black text-white font-semibold rounded-full-lg hover:bg-luxury-dark transition-all duration-300"
+              className="px-8 py-4 bg-slate-900 text-white font-semibold rounded-lg shadow-lg hover:bg-slate-800 transition-all duration-300"
             >
               Contact Us
             </Link>

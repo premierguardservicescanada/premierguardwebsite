@@ -109,7 +109,7 @@ export default function ServicesPage() {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-[50vh] flex items-center justify-center bg-black">
+      <section ref={heroRef} className="relative min-h-[50vh] flex items-center justify-center bg-slate-900">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://cdn.abacus.ai/images/221138cf-fd6b-43b2-94ad-8e4d362bde63.png"
@@ -117,7 +117,7 @@ export default function ServicesPage() {
             fill
             className="object-cover opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-luxury-bg/70 via-luxury-bg/50 to-luxury-bg" />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/50 to-slate-950" />
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 py-20 text-center">
@@ -125,7 +125,7 @@ export default function ServicesPage() {
             initial="hidden"
             animate={heroInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="text-2xl md:text-3xl font-elegant mb-4 text-luxury-gold tracking-wide"
+            className="text-2xl md:text-3xl font-bold mb-4 text-amber-500 tracking-wide"
           >
             PREMIER GUARD SERVICES
           </motion.h2>
@@ -133,15 +133,15 @@ export default function ServicesPage() {
             initial="hidden"
             animate={heroInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="text-5xl md:text-6xl font-elegant mb-6 text-white"
+            className="text-5xl md:text-6xl font-bold mb-6 text-white"
           >
-            Our <span className="text-luxury-gold">Security Services</span>
+            Our <span className="text-amber-500">Security Services</span>
           </motion.h1>
           <motion.p
             initial="hidden"
             animate={heroInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="text-xl text-white/80 max-w-2xl mx-auto"
+            className="text-xl text-slate-300 max-w-2xl mx-auto"
           >
             Comprehensive luxury security solutions tailored to meet your specific needs across Canada
           </motion.p>
@@ -149,7 +149,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section ref={servicesRef} className="bg-luxury-bg py-20">
+      <section ref={servicesRef} className="bg-slate-950 py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial="hidden"
@@ -167,26 +167,26 @@ export default function ServicesPage() {
               >
                 <div className={idx % 2 === 1 ? 'md:order-2' : ''}>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-3 bg-luxury-gold rounded-lg">
+                    <div className="p-3 bg-amber-600 rounded-lg">
                       <service.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h2 className="text-3xl font-elegant text-luxury-gold font-elegant">{service?.title ?? ''}</h2>
+                    <h2 className="text-3xl font-bold text-white">{service?.title ?? ''}</h2>
                   </div>
-                  <p className="text-lg text-white/80 mb-6">
+                  <p className="text-lg text-slate-300 mb-6">
                     {service?.description ?? ''}
                   </p>
                   <div className="space-y-2 mb-6">
                     {service?.details?.map?.((detail, detailIdx) => (
                       <div key={detailIdx} className="flex items-start gap-2">
-                        <Shield className="w-5 h-5 text-luxury-gold flex-shrink-0 mt-0.5" />
-                        <span className="text-white/70">{detail ?? ''}</span>
+                        <Shield className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-slate-400">{detail ?? ''}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 <div className={idx % 2 === 1 ? 'md:order-1' : ''}>
-                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-2xl border-[1.5px] border-luxury-gold">
+                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-2xl border border-slate-800">
                     <Image
                       src={service?.image ?? ''}
                       alt={service?.title ?? ''}
@@ -202,7 +202,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Additional Features */}
-      <section className="bg-black py-20">
+      <section className="bg-slate-900 py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial="hidden"
@@ -210,8 +210,8 @@ export default function ServicesPage() {
             variants={fadeInUp}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-elegant mb-4 text-luxury-gold font-elegant">
-              What Makes Our Services <span className="text-luxury-gold">Different</span>
+            <h2 className="text-4xl font-bold mb-4 text-white">
+              What Makes Our Services <span className="text-amber-500">Different</span>
             </h2>
           </motion.div>
 
@@ -238,10 +238,10 @@ export default function ServicesPage() {
               <motion.div
                 key={idx}
                 variants={fadeInUp}
-                className="bg-luxury-bg p-6 rounded-lg border-[1.5px] border-luxury-gold hover:border-luxury-gold hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-300"
+                className="bg-slate-950 p-6 rounded-lg border border-slate-800 hover:border-amber-500 hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-300"
               >
                 <h3 className="text-xl font-bold mb-3 text-white">{feature?.title ?? ''}</h3>
-                <p className="text-white/70">{feature?.desc ?? ''}</p>
+                <p className="text-slate-400">{feature?.desc ?? ''}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -249,25 +249,25 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-black border-t border-b border-luxury-gold/20 py-20">
+      <section className="bg-gradient-to-r from-amber-600 to-amber-700 py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-elegant mb-6 text-luxury-gold font-elegant">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Need Security Services?
           </h2>
-          <p className="text-xl text-white/80 mb-8">
+          <p className="text-xl text-amber-100 mb-8">
             Get a customized quote for your specific security needs today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/quote"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-luxury-gold font-semibold rounded-full-lg hover:bg-slate-100 transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-amber-600 font-semibold rounded-lg shadow-lg hover:bg-slate-100 transition-all duration-300"
             >
               Request a Quote
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               href="tel:4374459542"
-              className="px-8 py-4 bg-black text-white font-semibold rounded-full-lg hover:bg-luxury-dark transition-all duration-300"
+              className="px-8 py-4 bg-slate-900 text-white font-semibold rounded-lg shadow-lg hover:bg-slate-800 transition-all duration-300"
             >
               Call (437) 445-9542
             </Link>

@@ -9,6 +9,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'display': ['var(--font-cormorant)', 'Cormorant Garamond', 'serif'],
+        'elegant': ['var(--font-playfair)', 'Playfair Display', 'serif'],
+        'body': ['var(--font-inter)', 'Inter', 'sans-serif'],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -16,10 +21,16 @@ const config: Config = {
       },
       borderRadius: {
         lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
+        md: 'calc(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
       colors: {
+        luxury: {
+          bg: '#1d1511',
+          gold: '#c69e66',
+          'gold-light': '#d4af37',
+          dark: '#0a0806',
+        },
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

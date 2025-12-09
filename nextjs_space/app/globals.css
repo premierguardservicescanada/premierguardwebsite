@@ -4,6 +4,10 @@
 
 @layer base {
   :root {
+    --font-inter: 'Inter', sans-serif;
+    --font-cormorant: 'Cormorant Garamond', serif;
+    --font-playfair: 'Playfair Display', serif;
+    
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
@@ -29,10 +33,13 @@
 
 @layer base {
   * {
-    @apply border-slate-700;
+    @apply border-luxury-gold/30;
   }
   body {
-    @apply bg-slate-950 text-slate-100;
+    @apply bg-luxury-bg text-white font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair);
   }
 }
 
@@ -53,15 +60,15 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-slate-900;
+  @apply bg-luxury-dark;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-700 rounded-full;
+  @apply bg-luxury-gold/30 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-amber-600;
+  @apply bg-luxury-gold;
 }
 
 /* Remove hydration warnings */
