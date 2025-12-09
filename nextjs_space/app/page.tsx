@@ -4,8 +4,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Shield, Clock, Award, Users, PhoneCall, CheckCircle2, Star, ArrowRight } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { Shield, Clock, Award, Users, PhoneCall, CheckCircle2, Star, ArrowRight, Instagram } from 'lucide-react'
+import { useEffect, useState, useRef } from 'react'
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -41,251 +41,143 @@ function AnimatedCounter({ end, duration = 2000 }: { end: number; duration?: num
 }
 
 export default function HomePage() {
-  const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.2 })
   const [servicesRef, servicesInView] = useInView({ triggerOnce: true, threshold: 0.2 })
   const [whyUsRef, whyUsInView] = useInView({ triggerOnce: true, threshold: 0.2 })
   const [testimonialsRef, testimonialsInView] = useInView({ triggerOnce: true, threshold: 0.2 })
 
   return (
-    <div className="overflow-x-hidden">
-      {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-[90vh] flex items-center justify-center bg-black">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://cdn.abacus.ai/images/f41a7422-4331-46c2-a872-30fbdc85291c.png"
-            alt="Premier Guard Services professional security team"
-            fill
-            className="object-cover opacity-30"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-luxury-bg/80 via-luxury-bg/60 to-luxury-bg" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center">
-          <motion.div
-            initial="hidden"
-            animate={heroInView ? 'visible' : 'hidden'}
-            variants={fadeInUp}
-            className="mb-8"
-          >
-            <div className="relative w-96 h-48 md:w-[40rem] md:h-60 mx-auto mb-8">
-              <Image
-                src="https://cdn.abacus.ai/images/fbb7dfc1-475e-418b-b3ad-bef404ca9384.png"
-                alt="Premier Guard Services Corp Logo"
-                fill
-                className="object-contain drop-shadow-2xl"
-                priority
-              />
-            </div>
-          </motion.div>
-
-          <motion.h2
-            initial="hidden"
-            animate={heroInView ? 'visible' : 'hidden'}
-            variants={fadeInUp}
-            className="text-3xl md:text-4xl font-elegant mb-4 text-luxury-gold tracking-wide"
-          >
-            PREMIER GUARD SERVICES
-          </motion.h2>
-
-          <motion.h1
-            initial="hidden"
-            animate={heroInView ? 'visible' : 'hidden'}
-            variants={fadeInUp}
-            className="text-5xl md:text-7xl font-elegant mb-6 text-white"
-          >
-            Your Safety, <span className="text-luxury-gold">Our Priority</span>
-          </motion.h1>
-
-          <motion.p
-            initial="hidden"
-            animate={heroInView ? 'visible' : 'hidden'}
-            variants={fadeInUp}
-            className="text-xl md:text-2xl text-luxury-gold/80 mb-10 max-w-3xl mx-auto font-elegant"
-          >
-            Luxury professional, licensed security services across Canada. 
-            Trusted protection for your events, properties, and peace of mind.
-          </motion.p>
-
-          <motion.div
-            initial="hidden"
-            animate={heroInView ? 'visible' : 'hidden'}
-            variants={fadeInUp}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <Link
-              href="/quote"
-              className="group px-8 py-4 bg-luxury-gold hover:bg-luxury-gold text-white font-semibold rounded-full-lg hover:shadow-amber-500/50 transition-all duration-300 flex items-center gap-2"
-            >
-              Request a Quote
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              href="/contact"
-              className="px-8 py-4 bg-luxury-dark hover:bg-slate-700 text-white font-semibold rounded-full-lg border border-luxury-gold/30 hover:border-luxury-gold transition-all duration-300"
-            >
-              Contact Us
-            </Link>
-          </motion.div>
-        </div>
+    <div className="overflow-x-hidden bg-luxury-bg">
+      {/* Hero Section - Full Width Image Only */}
+      <section className="relative h-screen w-full">
+        <Image
+          src="https://cdn.abacus.ai/images/f41a7422-4331-46c2-a872-30fbdc85291c.png"
+          alt="Premier Guard Services"
+          fill
+          className="object-cover"
+          priority
+        />
       </section>
 
-      {/* Company Name Banner */}
-      <section className="bg-black py-12">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-elegant text-luxury-gold tracking-widest font-elegant">
-            PREMIER GUARD SERVICES
-          </h2>
-        </div>
-      </section>
-
-      {/* Key Differentiators */}
-      <section className="bg-black py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial="hidden"
-            animate={heroInView ? 'visible' : 'hidden'}
-            variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
-            {[
-              { icon: Shield, title: 'Licensed Guards', desc: 'Fully licensed and insured' },
-              { icon: Clock, title: '24/7 Coverage', desc: 'Round-the-clock protection' },
-              { icon: Award, title: 'Fast Response', desc: 'Quick deployment when needed' },
-              { icon: Users, title: 'Professional Team', desc: 'Trained and reliable staff' }
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                variants={fadeInUp}
-                className="bg-black/60 backdrop-blur p-6 rounded-lg border border-luxury-gold/30 hover:border-luxury-gold hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-300 group"
-              >
-                <item.icon className="w-12 h-12 text-luxury-gold mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
-                <p className="text-white/70">{item.desc}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Services Preview */}
-      <section ref={servicesRef} className="bg-luxury-bg py-20">
+      {/* Services - Horizontal Scroll */}
+      <section ref={servicesRef} className="bg-luxury-bg py-24">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial="hidden"
             animate={servicesInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-elegant mb-4 text-luxury-gold font-elegant">Our <span className="text-luxury-gold">Services</span></h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              Comprehensive security solutions tailored to your needs
+            <h2 className="text-5xl md:text-6xl font-elegant text-luxury-gold tracking-wide mb-4">
+              OUR SERVICES
+            </h2>
+            <p className="text-lg text-white/60 tracking-wider">
+              LUXURY SECURITY SOLUTIONS
             </p>
           </motion.div>
 
-          <motion.div
-            initial="hidden"
-            animate={servicesInView ? 'visible' : 'hidden'}
-            variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
-          >
-            {[
-              {
-                title: 'Private Event Security',
-                desc: 'Professional security for corporate events, weddings, concerts, and private functions',
-                image: 'https://cdn.abacus.ai/images/85bae8af-6026-43b4-9d5e-c9e3134a2319.png'
-              },
-              {
-                title: 'Retail Security',
-                desc: 'Loss prevention and customer safety for retail environments',
-                image: 'https://cdn.abacus.ai/images/733c7fe2-e931-4b45-9fc6-3cf39f8e4815.png'
-              },
-              {
-                title: 'Construction Site Security',
-                desc: '24/7 site protection and access control for construction projects',
-                image: 'https://cdn.abacus.ai/images/5fcf3f94-6333-49f6-8cce-ab10f1a495a9.png'
-              },
-              {
-                title: 'Mobile Patrol',
-                desc: 'Regular patrol services for multiple locations and properties',
-                image: 'https://cdn.abacus.ai/images/7eb30b6c-21fc-4d26-9d7f-894ca98389ee.png'
-              },
-              {
-                title: 'Concierge Security',
-                desc: 'Professional reception and access control for buildings',
-                image: 'https://cdn.abacus.ai/images/d75a4be0-0a0c-4400-a924-05186f1dec6b.png'
-              },
-              {
-                title: '24/7 Coverage',
-                desc: 'Round-the-clock protection services whenever you need them',
-                image: 'https://cdn.abacus.ai/images/800a6277-2773-4bc3-9fb9-ab2b65e25236.png'
-              }
-            ].map((service, idx) => (
-              <motion.div
-                key={idx}
-                variants={fadeInUp}
-                className="group bg-black rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-amber-500/20 transition-all duration-300 border-[1.5px] border-luxury-gold hover:border-luxury-gold"
-              >
-                <div className="relative aspect-[4/3] bg-luxury-dark">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-white group-hover:text-luxury-gold transition-colors">
+          {/* Horizontal Scrolling Container */}
+          <div className="relative">
+            <div className="flex overflow-x-auto gap-8 pb-8 scrollbar-hide snap-x snap-mandatory">
+              {[
+                {
+                  title: 'Private Event Security',
+                  desc: 'Professional security for corporate events, weddings, concerts, and private functions',
+                  image: 'https://cdn.abacus.ai/images/85bae8af-6026-43b4-9d5e-c9e3134a2319.png'
+                },
+                {
+                  title: 'Retail Security',
+                  desc: 'Loss prevention and customer safety for retail environments',
+                  image: 'https://cdn.abacus.ai/images/733c7fe2-e931-4b45-9fc6-3cf39f8e4815.png'
+                },
+                {
+                  title: 'Construction Site Security',
+                  desc: '24/7 site protection and access control for construction projects',
+                  image: 'https://cdn.abacus.ai/images/5fcf3f94-6333-49f6-8cce-ab10f1a495a9.png'
+                },
+                {
+                  title: 'Mobile Patrol',
+                  desc: 'Regular patrol services for multiple locations and properties',
+                  image: 'https://cdn.abacus.ai/images/7eb30b6c-21fc-4d26-9d7f-894ca98389ee.png'
+                },
+                {
+                  title: 'Concierge Security',
+                  desc: 'Professional reception and access control for buildings',
+                  image: 'https://cdn.abacus.ai/images/d75a4be0-0a0c-4400-a924-05186f1dec6b.png'
+                },
+                {
+                  title: '24/7 Coverage',
+                  desc: 'Round-the-clock protection services whenever you need them',
+                  image: 'https://cdn.abacus.ai/images/800a6277-2773-4bc3-9fb9-ab2b65e25236.png'
+                }
+              ].map((service, idx) => (
+                <div
+                  key={idx}
+                  className="flex-none w-80 snap-center group"
+                >
+                  <div className="relative aspect-[4/3] mb-6 overflow-hidden">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  </div>
+                  <h3 className="text-2xl font-elegant text-luxury-gold mb-3 tracking-wide">
                     {service.title}
                   </h3>
-                  <p className="text-white/70">{service.desc}</p>
+                  <p className="text-white/60 text-sm leading-relaxed">
+                    {service.desc}
+                  </p>
                 </div>
-              </motion.div>
-            ))}
-          </motion.div>
+              ))}
+            </div>
+          </div>
 
           <motion.div
             initial="hidden"
             animate={servicesInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="text-center"
+            className="text-center mt-16"
           >
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-luxury-gold hover:bg-luxury-gold text-white font-semibold rounded-full-lg hover:shadow-amber-500/50 transition-all duration-300"
+              className="inline-flex items-center gap-3 px-10 py-4 border-[1.5px] border-luxury-gold text-luxury-gold font-elegant text-sm tracking-wider hover:bg-luxury-gold hover:text-black transition-all duration-300"
             >
-              View All Services
-              <ArrowRight className="w-5 h-5" />
+              VIEW ALL SERVICES
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section ref={whyUsRef} className="bg-black py-20">
+      {/* Why Choose Premier Guard */}
+      <section ref={whyUsRef} className="bg-black py-24 border-t border-luxury-gold/10">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial="hidden"
             animate={whyUsInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="text-center mb-12"
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-elegant mb-4 text-luxury-gold font-elegant">Why Choose <span className="text-luxury-gold">Premier Guard</span></h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              Experience the difference of working with a dedicated security partner
+            <h2 className="text-5xl md:text-6xl font-elegant text-luxury-gold tracking-wide mb-4">
+              WHY CHOOSE PREMIER GUARD
+            </h2>
+            <p className="text-lg text-white/60 tracking-wider">
+              LUXURY SECURITY, PROFESSIONAL EXCELLENCE
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+          <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
             <motion.div
               initial="hidden"
               animate={whyUsInView ? 'visible' : 'hidden'}
               variants={fadeInUp}
-              className="relative aspect-video rounded-lg overflow-hidden shadow-2xl"
+              className="relative aspect-[4/3] overflow-hidden"
             >
               <Image
                 src="https://cdn.abacus.ai/images/8ff174d6-7a50-463f-99b8-7f2fd58a3614.png"
-                alt="Professional security team with PREMIER GUARD uniforms"
+                alt="Premier Guard Services Team"
                 fill
                 className="object-cover"
               />
@@ -295,7 +187,7 @@ export default function HomePage() {
               initial="hidden"
               animate={whyUsInView ? 'visible' : 'hidden'}
               variants={staggerContainer}
-              className="space-y-4"
+              className="space-y-6"
             >
               {[
                 'Licensed & Insured Guards',
@@ -309,10 +201,12 @@ export default function HomePage() {
                 <motion.div
                   key={idx}
                   variants={fadeInUp}
-                  className="flex items-center gap-3 p-4 bg-black/60 rounded-lg border border-luxury-gold/30 hover:border-luxury-gold transition-colors"
+                  className="flex items-center gap-4 group"
                 >
-                  <CheckCircle2 className="w-6 h-6 text-luxury-gold flex-shrink-0" />
-                  <span className="text-lg text-white">{item}</span>
+                  <div className="w-1.5 h-1.5 bg-luxury-gold" />
+                  <span className="text-white text-lg tracking-wide group-hover:text-luxury-gold transition-colors duration-300">
+                    {item}
+                  </span>
                 </motion.div>
               ))}
             </motion.div>
@@ -323,41 +217,43 @@ export default function HomePage() {
             initial="hidden"
             animate={whyUsInView ? 'visible' : 'hidden'}
             variants={staggerContainer}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6"
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-b border-luxury-gold/10 py-16"
           >
             {[
-              { end: 500, suffix: '+', label: 'Events Secured' },
-              { end: 24, suffix: '/7', label: 'Availability' },
-              { end: 100, suffix: '%', label: 'Licensed Staff' },
-              { end: 98, suffix: '%', label: 'Client Satisfaction' }
+              { end: 500, suffix: '+', label: 'EVENTS SECURED' },
+              { end: 24, suffix: '/7', label: 'AVAILABILITY' },
+              { end: 100, suffix: '%', label: 'LICENSED STAFF' },
+              { end: 98, suffix: '%', label: 'SATISFACTION' }
             ].map((stat, idx) => (
               <motion.div
                 key={idx}
                 variants={fadeInUp}
-                className="text-center p-6 bg-black/60 rounded-lg border border-luxury-gold/30"
+                className="text-center"
               >
-                <div className="text-4xl md:text-5xl font-elegant text-luxury-gold mb-2">
+                <div className="text-5xl md:text-6xl font-elegant text-luxury-gold mb-3">
                   <AnimatedCounter end={stat.end} />{stat.suffix}
                 </div>
-                <div className="text-white/70">{stat.label}</div>
+                <div className="text-white/60 text-sm tracking-widest">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section ref={testimonialsRef} className="bg-luxury-bg py-20">
+      {/* Client Testimonials */}
+      <section ref={testimonialsRef} className="bg-luxury-bg py-24">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial="hidden"
             animate={testimonialsInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="text-center mb-12"
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-elegant mb-4 text-luxury-gold font-elegant">What Our <span className="text-luxury-gold">Clients Say</span></h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              Don't just take our word for it
+            <h2 className="text-5xl md:text-6xl font-elegant text-luxury-gold tracking-wide mb-4">
+              CLIENT TESTIMONIALS
+            </h2>
+            <p className="text-lg text-white/60 tracking-wider">
+              TRUSTED BY CANADA'S FINEST
             </p>
           </motion.div>
 
@@ -365,7 +261,7 @@ export default function HomePage() {
             initial="hidden"
             animate={testimonialsInView ? 'visible' : 'hidden'}
             variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
             {[
               {
@@ -390,18 +286,20 @@ export default function HomePage() {
               <motion.div
                 key={idx}
                 variants={fadeInUp}
-                className="bg-black p-6 rounded-full-lg border-[1.5px] border-luxury-gold hover:border-luxury-gold hover:shadow-amber-500/20 transition-all duration-300"
+                className="bg-black/40 p-8 border-[1.5px] border-luxury-gold/20 hover:border-luxury-gold/50 transition-all duration-300"
               >
-                <div className="flex gap-1 mb-4">
+                <div className="flex gap-1 mb-6">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-amber-500 text-luxury-gold" />
+                    <Star key={i} className="w-4 h-4 fill-luxury-gold text-luxury-gold" />
                   ))}
                 </div>
-                <p className="text-white/80 mb-6 italic">"{testimonial.text}"</p>
-                <div className="border-t border-luxury-gold/20 pt-4">
-                  <div className="font-elegant text-white">{testimonial.name}</div>
-                  <div className="text-sm text-luxury-gold">{testimonial.role}</div>
-                  <div className="text-sm text-white/70">{testimonial.company}</div>
+                <p className="text-white/70 mb-8 leading-relaxed italic">
+                  "{testimonial.text}"
+                </p>
+                <div className="border-t border-luxury-gold/20 pt-6">
+                  <div className="font-elegant text-luxury-gold text-lg tracking-wide">{testimonial.name}</div>
+                  <div className="text-sm text-white/60 mt-1">{testimonial.role}</div>
+                  <div className="text-sm text-white/40 mt-0.5">{testimonial.company}</div>
                 </div>
               </motion.div>
             ))}
@@ -409,27 +307,54 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-black border-t border-b border-luxury-gold/20 py-20">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-elegant mb-6 text-luxury-gold font-elegant">Ready to Secure Your Peace of Mind?</h2>
-          <p className="text-xl text-white/80 mb-8">
-            Get a free quote today and experience professional security services you can trust.
+      {/* Contact & Social Media */}
+      <section className="bg-black py-24 border-t border-luxury-gold/10">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h2 className="text-5xl md:text-6xl font-elegant text-luxury-gold tracking-wide mb-6">
+            GET IN TOUCH
+          </h2>
+          <p className="text-lg text-white/60 mb-12 tracking-wider">
+            READY TO SECURE YOUR PEACE OF MIND?
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Link
               href="/quote"
-              className="px-8 py-4 bg-white text-luxury-gold font-semibold rounded-full-lg hover:bg-slate-100 transition-all duration-300"
+              className="px-12 py-4 border-[1.5px] border-luxury-gold text-luxury-gold font-elegant text-sm tracking-wider hover:bg-luxury-gold hover:text-black transition-all duration-300"
             >
-              Get Your Free Quote
+              REQUEST A QUOTE
             </Link>
             <Link
               href="tel:4374459542"
-              className="flex items-center justify-center gap-2 px-8 py-4 bg-black text-white font-semibold rounded-full-lg hover:bg-luxury-dark transition-all duration-300"
+              className="flex items-center justify-center gap-3 px-12 py-4 bg-luxury-gold text-black font-elegant text-sm tracking-wider hover:bg-luxury-gold-light transition-all duration-300"
             >
-              <PhoneCall className="w-5 h-5" />
+              <PhoneCall className="w-4 h-4" />
               (437) 445-9542
             </Link>
+          </div>
+
+          {/* Contact Info */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-12 text-white/60">
+            <a 
+              href="mailto:Premierguardservicescorp@gmail.com" 
+              className="hover:text-luxury-gold transition-colors tracking-wide"
+            >
+              Premierguardservicescorp@gmail.com
+            </a>
+            <span className="hidden sm:block text-luxury-gold/30">|</span>
+            <span className="tracking-wider">SERVING IN CANADA</span>
+          </div>
+
+          {/* Social Media */}
+          <div className="flex items-center justify-center gap-6">
+            <a
+              href="https://www.instagram.com/premierguardservices/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 border-[1.5px] border-luxury-gold/30 hover:border-luxury-gold flex items-center justify-center hover:bg-luxury-gold/10 transition-all duration-300 group"
+            >
+              <Instagram className="w-5 h-5 text-luxury-gold" />
+            </a>
           </div>
         </div>
       </section>
