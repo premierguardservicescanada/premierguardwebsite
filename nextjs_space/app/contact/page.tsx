@@ -59,7 +59,7 @@ export default function ContactPage() {
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
-            className="text-2xl md:text-3xl font-elegant mb-4 text-luxury-gold tracking-wide"
+            className="text-2xl md:text-3xl font-elegant mb-4 text-white tracking-wide"
           >
             PREMIER GUARD SERVICES
           </motion.h2>
@@ -69,7 +69,7 @@ export default function ContactPage() {
             variants={fadeInUp}
             className="text-5xl md:text-6xl font-elegant mb-6 text-white"
           >
-            Get in <span className="text-luxury-gold">Touch</span>
+            Get in <span className="text-white">Touch</span>
           </motion.h1>
           <motion.p
             initial="hidden"
@@ -83,7 +83,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Content */}
-      <section className="bg-luxury-bg py-20">
+      <section className="bg-black py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
@@ -94,8 +94,8 @@ export default function ContactPage() {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-3xl font-elegant mb-6 text-luxury-gold font-elegant">
-                  Contact <span className="text-luxury-gold">Information</span>
+                <h2 className="text-3xl font-elegant mb-6 text-white font-elegant">
+                  Contact <span className="text-white">Information</span>
                 </h2>
                 <p className="text-lg text-white/70 mb-8">
                   Reach out to Premier Guard Services for all your security needs. We're available 24/7 to serve you.
@@ -103,15 +103,15 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-6">
-                <div className="flex items-start gap-4 p-4 bg-black rounded-lg border-[1.5px] border-luxury-gold">
-                  <div className="p-3 bg-luxury-gold rounded-lg">
+                <div className="flex items-start gap-4 p-4 bg-black rounded-lg border-[1.5px] border-white">
+                  <div className="p-3 bg-white rounded-lg">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h3 className="font-elegant text-white mb-1">Phone</h3>
                     <a
                       href="tel:4374459542"
-                      className="text-luxury-gold hover:text-amber-400 transition-colors text-lg"
+                      className="text-white hover:text-gray-300 transition-colors text-lg"
                     >
                       (437) 445-9542
                     </a>
@@ -119,15 +119,15 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 bg-black rounded-lg border-[1.5px] border-luxury-gold">
-                  <div className="p-3 bg-luxury-gold rounded-lg">
+                <div className="flex items-start gap-4 p-4 bg-black rounded-lg border-[1.5px] border-white">
+                  <div className="p-3 bg-white rounded-lg">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h3 className="font-elegant text-white mb-1">Email</h3>
                     <a
                       href="mailto:Premierguardservicescorp@gmail.com"
-                      className="text-luxury-gold hover:text-amber-400 transition-colors break-all"
+                      className="text-white hover:text-gray-300 transition-colors break-all"
                     >
                       Premierguardservicescorp@gmail.com
                     </a>
@@ -135,8 +135,8 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 bg-black rounded-lg border-[1.5px] border-luxury-gold">
-                  <div className="p-3 bg-luxury-gold rounded-lg">
+                <div className="flex items-start gap-4 p-4 bg-black rounded-lg border-[1.5px] border-white">
+                  <div className="p-3 bg-white rounded-lg">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -146,8 +146,8 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 bg-black rounded-lg border-[1.5px] border-luxury-gold">
-                  <div className="p-3 bg-luxury-gold rounded-lg">
+                <div className="flex items-start gap-4 p-4 bg-black rounded-lg border-[1.5px] border-white">
+                  <div className="p-3 bg-white rounded-lg">
                     <Instagram className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -156,7 +156,7 @@ export default function ContactPage() {
                       href="https://www.instagram.com/premierguardservices/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-luxury-gold hover:text-amber-400 transition-colors"
+                      className="text-white hover:text-gray-300 transition-colors"
                     >
                       @premierguardservices
                     </a>
@@ -165,7 +165,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="p-6 bg-gradient-to-br from-amber-600/20 to-amber-700/20 border border-amber-600/30 rounded-lg">
+              <div className="p-6 bg-gradient-to-br from-gray-900/20 to-gray-800/20 border border-white/30 rounded-lg">
                 <h3 className="font-elegant text-white mb-2">Business Hours</h3>
                 <p className="text-white/80">24/7 Emergency Response</p>
                 <p className="text-sm text-white/70 mt-2">
@@ -182,9 +182,9 @@ export default function ContactPage() {
               animate={formInView ? 'visible' : 'hidden'}
               variants={fadeInUp}
             >
-              <div className="bg-black p-8 rounded-lg border-[1.5px] border-luxury-gold shadow-2xl">
-                <h2 className="text-3xl font-elegant mb-6 text-luxury-gold font-elegant">
-                  Send us a <span className="text-luxury-gold">Message</span>
+              <div className="bg-black p-8 rounded-lg border-[1.5px] border-white shadow-2xl">
+                <h2 className="text-3xl font-elegant mb-6 text-white font-elegant">
+                  Send us a <span className="text-white">Message</span>
                 </h2>
 
                 {status === 'success' && (
@@ -212,7 +212,7 @@ export default function ContactPage() {
                       value={formData?.name ?? ''}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-luxury-bg border border-luxury-gold/30 rounded-lg text-white placeholder-slate-500 focus:border-luxury-gold focus:ring-2 focus:ring-amber-500/20 transition-colors"
+                      className="w-full px-4 py-3 bg-black border border-white/30 rounded-lg text-white placeholder-slate-500 focus:border-white focus:ring-2 focus:ring-white/20 transition-colors"
                       placeholder="Your name"
                     />
                   </div>
@@ -228,7 +228,7 @@ export default function ContactPage() {
                       value={formData?.email ?? ''}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-luxury-bg border border-luxury-gold/30 rounded-lg text-white placeholder-slate-500 focus:border-luxury-gold focus:ring-2 focus:ring-amber-500/20 transition-colors"
+                      className="w-full px-4 py-3 bg-black border border-white/30 rounded-lg text-white placeholder-slate-500 focus:border-white focus:ring-2 focus:ring-white/20 transition-colors"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -243,7 +243,7 @@ export default function ContactPage() {
                       name="phone"
                       value={formData?.phone ?? ''}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-luxury-bg border border-luxury-gold/30 rounded-lg text-white placeholder-slate-500 focus:border-luxury-gold focus:ring-2 focus:ring-amber-500/20 transition-colors"
+                      className="w-full px-4 py-3 bg-black border border-white/30 rounded-lg text-white placeholder-slate-500 focus:border-white focus:ring-2 focus:ring-white/20 transition-colors"
                       placeholder="(123) 456-7890"
                     />
                   </div>
@@ -259,7 +259,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 bg-luxury-bg border border-luxury-gold/30 rounded-lg text-white placeholder-slate-500 focus:border-luxury-gold focus:ring-2 focus:ring-amber-500/20 transition-colors resize-none"
+                      className="w-full px-4 py-3 bg-black border border-white/30 rounded-lg text-white placeholder-slate-500 focus:border-white focus:ring-2 focus:ring-white/20 transition-colors resize-none"
                       placeholder="Tell us about your security needs..."
                     />
                   </div>
@@ -272,7 +272,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-luxury-gold hover:bg-luxury-gold disabled:bg-slate-700 disabled:cursor-not-allowed text-white font-semibold rounded-full-lg hover:shadow-amber-500/50 transition-all duration-300"
+                    className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-white hover:bg-white disabled:bg-slate-700 disabled:cursor-not-allowed text-white font-semibold rounded-full-lg hover:shadow-white/10 transition-all duration-300"
                   >
                     {status === 'submitting' ? (
                       'Sending...'

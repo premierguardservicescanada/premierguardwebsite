@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, Instagram } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-luxury-gold/20">
+    <footer className="bg-black border-t border-white/20">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
@@ -26,7 +26,7 @@ export default function Footer() {
               href="https://www.instagram.com/premierguardservices/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-luxury-gold hover:text-luxury-gold-light transition-colors"
+              className="inline-flex items-center gap-2 text-white hover:text-white-light transition-colors"
             >
               <Instagram className="w-5 h-5" />
               <span className="font-body text-sm">Follow us on Instagram</span>
@@ -35,7 +35,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-luxury-gold font-elegant text-lg mb-6 tracking-wide">QUICK LINKS</h3>
+            <h3 className="text-white font-elegant text-lg mb-6 tracking-wide">QUICK LINKS</h3>
             <ul className="space-y-3">
               {[
                 { href: '/', label: 'Home' },
@@ -48,7 +48,7 @@ export default function Footer() {
                 <li key={link?.href ?? ''}>
                   <Link
                     href={link?.href ?? '#'}
-                    className="text-white/70 hover:text-luxury-gold transition-colors font-body text-sm"
+                    className="text-white/70 hover:text-white transition-colors font-body text-sm"
                   >
                     {link?.label ?? ''}
                   </Link>
@@ -59,7 +59,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-luxury-gold font-elegant text-lg mb-6 tracking-wide">OUR SERVICES</h3>
+            <h3 className="text-white font-elegant text-lg mb-6 tracking-wide">OUR SERVICES</h3>
             <ul className="space-y-3 text-white/70 font-body text-sm">
               <li>Event Security</li>
               <li>Retail Security</li>
@@ -72,12 +72,12 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-luxury-gold font-elegant text-lg mb-6 tracking-wide">CONTACT US</h3>
+            <h3 className="text-white font-elegant text-lg mb-6 tracking-wide">CONTACT US</h3>
             <ul className="space-y-4">
               <li>
                 <a
                   href="tel:4374459542"
-                  className="flex items-center gap-3 text-white/70 hover:text-luxury-gold transition-colors"
+                  className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
                 >
                   <Phone className="w-5 h-5 flex-shrink-0" />
                   <span className="font-body text-sm">(437) 445-9542</span>
@@ -86,7 +86,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:Premierguardservicescorp@gmail.com"
-                  className="flex items-center gap-3 text-white/70 hover:text-luxury-gold transition-colors"
+                  className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
                 >
                   <Mail className="w-5 h-5 flex-shrink-0" />
                   <span className="break-all font-body text-sm">Premierguardservicescorp@gmail.com</span>
@@ -101,7 +101,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-luxury-gold/20 pt-8">
+        <div className="border-t border-white/20 pt-8">
           <p className="text-white/50 text-center font-body text-sm">
             © 2024 Premier Guard Services Corp. All rights reserved.
           </p>

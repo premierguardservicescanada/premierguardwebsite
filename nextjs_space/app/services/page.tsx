@@ -125,7 +125,7 @@ export default function ServicesPage() {
             initial="hidden"
             animate={heroInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="text-2xl md:text-3xl font-elegant mb-4 text-luxury-gold tracking-wide"
+            className="text-2xl md:text-3xl font-elegant mb-4 text-white tracking-wide"
           >
             PREMIER GUARD SERVICES
           </motion.h2>
@@ -135,7 +135,7 @@ export default function ServicesPage() {
             variants={fadeInUp}
             className="text-5xl md:text-6xl font-elegant mb-6 text-white"
           >
-            Our <span className="text-luxury-gold">Security Services</span>
+            Our <span className="text-white">Security Services</span>
           </motion.h1>
           <motion.p
             initial="hidden"
@@ -149,7 +149,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section ref={servicesRef} className="bg-luxury-bg py-20">
+      <section ref={servicesRef} className="bg-black py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial="hidden"
@@ -167,10 +167,10 @@ export default function ServicesPage() {
               >
                 <div className={idx % 2 === 1 ? 'md:order-2' : ''}>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-3 bg-luxury-gold rounded-lg">
+                    <div className="p-3 bg-white rounded-lg">
                       <service.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h2 className="text-3xl font-elegant text-luxury-gold font-elegant">{service?.title ?? ''}</h2>
+                    <h2 className="text-3xl font-elegant text-white font-elegant">{service?.title ?? ''}</h2>
                   </div>
                   <p className="text-lg text-white/80 mb-6">
                     {service?.description ?? ''}
@@ -178,7 +178,7 @@ export default function ServicesPage() {
                   <div className="space-y-2 mb-6">
                     {service?.details?.map?.((detail, detailIdx) => (
                       <div key={detailIdx} className="flex items-start gap-2">
-                        <Shield className="w-5 h-5 text-luxury-gold flex-shrink-0 mt-0.5" />
+                        <Shield className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
                         <span className="text-white/70">{detail ?? ''}</span>
                       </div>
                     ))}
@@ -186,7 +186,7 @@ export default function ServicesPage() {
                 </div>
 
                 <div className={idx % 2 === 1 ? 'md:order-1' : ''}>
-                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-2xl border-[1.5px] border-luxury-gold">
+                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-2xl border-[1.5px] border-white">
                     <Image
                       src={service?.image ?? ''}
                       alt={service?.title ?? ''}
@@ -210,8 +210,8 @@ export default function ServicesPage() {
             variants={fadeInUp}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-elegant mb-4 text-luxury-gold font-elegant">
-              What Makes Our Services <span className="text-luxury-gold">Different</span>
+            <h2 className="text-4xl font-elegant mb-4 text-white font-elegant">
+              What Makes Our Services <span className="text-white">Different</span>
             </h2>
           </motion.div>
 
@@ -238,7 +238,7 @@ export default function ServicesPage() {
               <motion.div
                 key={idx}
                 variants={fadeInUp}
-                className="bg-luxury-bg p-6 rounded-lg border-[1.5px] border-luxury-gold hover:border-luxury-gold hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-300"
+                className="bg-black p-6 rounded-lg border-[1.5px] border-white hover:border-white hover:shadow-lg hover:shadow-white/10 transition-all duration-300"
               >
                 <h3 className="text-xl font-bold mb-3 text-white">{feature?.title ?? ''}</h3>
                 <p className="text-white/70">{feature?.desc ?? ''}</p>
@@ -249,9 +249,9 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-black border-t border-b border-luxury-gold/20 py-20">
+      <section className="bg-black border-t border-b border-white/20 py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-elegant mb-6 text-luxury-gold font-elegant">
+          <h2 className="text-4xl md:text-5xl font-elegant mb-6 text-white font-elegant">
             Need Security Services?
           </h2>
           <p className="text-xl text-white/80 mb-8">
@@ -260,7 +260,7 @@ export default function ServicesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/quote"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-luxury-gold font-semibold rounded-full-lg hover:bg-slate-100 transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-white font-semibold rounded-full-lg hover:bg-slate-100 transition-all duration-300"
             >
               Request a Quote
               <ArrowRight className="w-5 h-5" />

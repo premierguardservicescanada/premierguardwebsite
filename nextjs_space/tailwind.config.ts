@@ -26,10 +26,10 @@ const config: Config = {
       },
       colors: {
         luxury: {
-          bg: '#1d1511',
-          gold: '#c69e66',
-          'gold-light': '#d4af37',
-          dark: '#0a0806',
+          bg: '#000000',
+          gold: '#ffffff',
+          'gold-light': '#e5e5e5',
+          dark: '#0a0a0a',
         },
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',

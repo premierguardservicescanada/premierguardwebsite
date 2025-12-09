@@ -48,7 +48,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.variable} ${cormorant.variable} ${playfair.variable} font-body bg-luxury-bg text-white antialiased`}>
+      <body className={`${inter.variable} ${cormorant.variable} ${playfair.variable} font-body bg-black text-white antialiased`}>
         <Header />
         <main className="min-h-screen">
           {children}

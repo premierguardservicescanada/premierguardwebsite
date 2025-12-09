@@ -41,7 +41,7 @@ export default function BlogPostPage() {
         <div className="max-w-4xl mx-auto px-6">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-slate-400 hover:text-amber-500 transition-colors"
+            className="inline-flex items-center gap-2 text-slate-400 hover:text-gray-300 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
@@ -57,7 +57,7 @@ export default function BlogPostPage() {
             animate="visible"
             variants={fadeInUp}
           >
-            <span className="inline-block px-3 py-1 bg-amber-600/20 text-amber-500 rounded-full border border-amber-600/30 text-sm mb-6">
+            <span className="inline-block px-3 py-1 bg-gray-900/50 text-white rounded-full border border-white/30 text-sm mb-6">
               Event Security
             </span>
 
@@ -77,7 +77,7 @@ export default function BlogPostPage() {
               <span>8 min read</span>
               <button
                 onClick={handleShare}
-                className="ml-auto flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded-lg border border-slate-700 hover:border-amber-500 transition-colors"
+                className="ml-auto flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded-lg border border-slate-700 hover:border-white transition-colors"
               >
                 <Share2 className="w-4 h-4" />
                 {shareStatus || 'Share'}
@@ -257,18 +257,18 @@ export default function BlogPostPage() {
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
-            className="mt-12 p-8 bg-gradient-to-r from-amber-600 to-amber-700 rounded-lg text-center"
+            className="mt-12 p-8 bg-gradient-to-r from-gray-900 to-gray-800 rounded-lg text-center"
           >
             <h3 className="text-2xl font-bold text-white mb-4">
               Need Security for Your Corporate Event?
             </h3>
-            <p className="text-amber-100 mb-6">
+            <p className="text-white mb-6">
               Get a customized security plan and quote from our experienced team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/quote"
-                className="px-8 py-3 bg-white text-amber-600 font-semibold rounded-lg shadow-lg hover:bg-slate-100 transition-colors"
+                className="px-8 py-3 bg-white text-white font-semibold rounded-lg shadow-lg hover:bg-slate-100 transition-colors"
               >
                 Request a Quote
               </Link>

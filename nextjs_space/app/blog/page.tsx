@@ -37,7 +37,7 @@ export default function BlogPage() {
             initial="hidden"
             animate={heroInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="text-2xl md:text-3xl font-elegant mb-4 text-luxury-gold tracking-wide"
+            className="text-2xl md:text-3xl font-elegant mb-4 text-white tracking-wide"
           >
             PREMIER GUARD SERVICES
           </motion.h2>
@@ -47,7 +47,7 @@ export default function BlogPage() {
             variants={fadeInUp}
             className="text-5xl md:text-6xl font-elegant mb-6 text-white"
           >
-            Security <span className="text-luxury-gold">Insights</span>
+            Security <span className="text-white">Insights</span>
           </motion.h1>
           <motion.p
             initial="hidden"
@@ -61,7 +61,7 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Posts */}
-      <section ref={postsRef} className="bg-luxury-bg py-20">
+      <section ref={postsRef} className="bg-black py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-8">
             {blogPosts?.map?.((post, idx) => (
@@ -70,7 +70,7 @@ export default function BlogPage() {
                 initial="hidden"
                 animate={postsInView ? 'visible' : 'hidden'}
                 variants={fadeInUp}
-                className="group bg-black rounded-lg overflow-hidden border-[1.5px] border-luxury-gold hover:border-luxury-gold shadow-lg hover:shadow-2xl hover:shadow-amber-500/20 transition-all duration-300"
+                className="group bg-black rounded-lg overflow-hidden border-[1.5px] border-white hover:border-white shadow-lg hover:shadow-2xl hover:shadow-white/10 transition-all duration-300"
               >
                 <div className="grid md:grid-cols-5 gap-0">
                   <div className="md:col-span-2 relative aspect-video md:aspect-[4/3] bg-luxury-dark">
@@ -84,7 +84,7 @@ export default function BlogPage() {
 
                   <div className="md:col-span-3 p-8">
                     <div className="flex items-center gap-4 mb-4 text-sm text-white/70">
-                      <span className="px-3 py-1 bg-luxury-gold/20 text-luxury-gold rounded-full border border-amber-600/30">
+                      <span className="px-3 py-1 bg-white/20 text-white rounded-full border border-white/30">
                         {post?.category ?? ''}
                       </span>
                       <div className="flex items-center gap-1">
@@ -95,7 +95,7 @@ export default function BlogPage() {
                     </div>
 
                     <Link href={`/blog/${post?.slug ?? ''}`}>
-                      <h2 className="text-2xl md:text-3xl font-elegant mb-4 text-luxury-gold group-hover:text-luxury-gold transition-colors font-elegant">
+                      <h2 className="text-2xl md:text-3xl font-elegant mb-4 text-white group-hover:text-white transition-colors font-elegant">
                         {post?.title ?? ''}
                       </h2>
                     </Link>
@@ -112,7 +112,7 @@ export default function BlogPage() {
 
                       <Link
                         href={`/blog/${post?.slug ?? ''}`}
-                        className="inline-flex items-center gap-2 text-luxury-gold hover:text-amber-400 font-semibold transition-colors"
+                        className="inline-flex items-center gap-2 text-white hover:text-gray-300 font-semibold transition-colors"
                       >
                         Read More
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -129,7 +129,7 @@ export default function BlogPage() {
             initial="hidden"
             animate={postsInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="mt-12 text-center p-8 bg-black rounded-lg border-[1.5px] border-luxury-gold"
+            className="mt-12 text-center p-8 bg-black rounded-lg border-[1.5px] border-white"
           >
             <p className="text-white/70 text-lg">
               More security insights and tips coming soon. Follow us on{' '}
@@ -137,7 +137,7 @@ export default function BlogPage() {
                 href="https://www.instagram.com/premierguardservices?igsh=aGRpNHR2ZGcxcHQz&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-luxury-gold hover:text-amber-400 transition-colors"
+                className="text-white hover:text-gray-300 transition-colors"
               >
                 Instagram
               </a>

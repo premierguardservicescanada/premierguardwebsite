@@ -33,10 +33,10 @@
 
 @layer base {
   * {
-    @apply border-luxury-gold/30;
+    @apply border-white/30;
   }
   body {
-    @apply bg-luxury-bg text-white font-body;
+    @apply bg-black text-white font-body;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-playfair);
@@ -60,15 +60,15 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-luxury-dark;
+  @apply bg-black;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-luxury-gold/30 rounded-full;
+  @apply bg-white/30 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-luxury-gold;
+  @apply bg-white/50;
 }
 
 /* Remove hydration warnings */

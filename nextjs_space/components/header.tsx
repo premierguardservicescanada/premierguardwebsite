@@ -29,7 +29,7 @@ export default function Header() {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'bg-black/98 backdrop-blur-md border-b border-luxury-gold/20' : 'bg-transparent'
+        scrolled ? 'bg-black/98 backdrop-blur-md border-b border-white/20' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -53,7 +53,7 @@ export default function Header() {
               <Link
                 key={link?.href ?? ''}
                 href={link?.href ?? '#'}
-                className="text-white hover:text-luxury-gold font-body text-sm tracking-[0.2em] transition-colors duration-300"
+                className="text-white hover:text-white font-body text-sm tracking-[0.2em] transition-colors duration-300"
               >
                 {link?.label ?? ''}
               </Link>
@@ -64,7 +64,7 @@ export default function Header() {
           <div className="hidden lg:block">
             <Link
               href="/quote"
-              className="inline-block px-8 py-2.5 border-[1.5px] border-luxury-gold text-luxury-gold font-elegant text-sm tracking-wide hover:bg-luxury-gold hover:text-black transition-all duration-300 rounded-full"
+              className="inline-block px-8 py-2.5 border-[1.5px] border-white text-white font-elegant text-sm tracking-wide hover:bg-white hover:text-black transition-all duration-300 rounded-full"
             >
               GET A QUOTE
             </Link>
@@ -73,7 +73,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-white hover:text-luxury-gold transition-colors"
+            className="lg:hidden p-2 text-white hover:text-white transition-colors"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -89,7 +89,7 @@ export default function Header() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden border-t border-luxury-gold/20 bg-black"
+            className="lg:hidden border-t border-white/20 bg-black"
           >
             <nav className="px-6 py-6 space-y-4">
               {navLinks?.map?.((link) => (
@@ -97,16 +97,16 @@ export default function Header() {
                   key={link?.href ?? ''}
                   href={link?.href ?? '#'}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block py-2 text-white hover:text-luxury-gold font-body text-sm tracking-wider transition-colors"
+                  className="block py-2 text-white hover:text-white font-body text-sm tracking-wider transition-colors"
                 >
                   {link?.label ?? ''}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-luxury-gold/20">
+              <div className="pt-4 border-t border-white/20">
                 <Link
                   href="/quote"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block text-center px-8 py-3 border-[1.5px] border-luxury-gold text-luxury-gold font-elegant text-sm tracking-wide rounded-full transition-all duration-300"
+                  className="block text-center px-8 py-3 border-[1.5px] border-white text-white font-elegant text-sm tracking-wide rounded-full transition-all duration-300"
                 >
                   GET A QUOTE
                 </Link>

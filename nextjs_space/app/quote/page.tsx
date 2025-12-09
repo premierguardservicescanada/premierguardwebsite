@@ -87,7 +87,7 @@ export default function QuotePage() {
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
-            className="text-2xl md:text-3xl font-elegant mb-4 text-luxury-gold tracking-wide"
+            className="text-2xl md:text-3xl font-elegant mb-4 text-white tracking-wide"
           >
             PREMIER GUARD SERVICES
           </motion.h2>
@@ -97,7 +97,7 @@ export default function QuotePage() {
             variants={fadeInUp}
             className="text-5xl md:text-6xl font-elegant mb-6 text-white"
           >
-            Request a <span className="text-luxury-gold">Quote</span>
+            Request a <span className="text-white">Quote</span>
           </motion.h1>
           <motion.p
             initial="hidden"
@@ -111,21 +111,21 @@ export default function QuotePage() {
       </section>
 
       {/* Quote Form */}
-      <section className="bg-luxury-bg py-20">
+      <section className="bg-black py-20">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div
             ref={formRef}
             initial="hidden"
             animate={formInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="bg-black p-8 md:p-12 rounded-lg border-[1.5px] border-luxury-gold shadow-2xl"
+            className="bg-black p-8 md:p-12 rounded-lg border-[1.5px] border-white shadow-2xl"
           >
             {status === 'success' ? (
               <div className="text-center py-12">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-green-900/30 border-2 border-green-600 rounded-full mb-6">
                   <CheckCircle2 className="w-10 h-10 text-green-500" />
                 </div>
-                <h2 className="text-3xl font-elegant mb-4 text-luxury-gold font-elegant">Quote Request Submitted!</h2>
+                <h2 className="text-3xl font-elegant mb-4 text-white font-elegant">Quote Request Submitted!</h2>
                 <p className="text-lg text-white/80 mb-2">
                   Thank you for choosing Premier Guard Services.
                 </p>
@@ -134,7 +134,7 @@ export default function QuotePage() {
                 </p>
                 <button
                   onClick={() => setStatus('idle')}
-                  className="px-8 py-3 bg-luxury-gold hover:bg-luxury-gold text-white font-semibold rounded-lg transition-colors"
+                  className="px-8 py-3 bg-white hover:bg-white text-white font-semibold rounded-lg transition-colors"
                 >
                   Submit Another Request
                 </button>
@@ -143,8 +143,8 @@ export default function QuotePage() {
               <>
                 <div className="mb-8">
                   <div className="flex items-center gap-3 mb-4">
-                    <FileText className="w-8 h-8 text-luxury-gold" />
-                    <h2 className="text-3xl font-elegant text-luxury-gold font-elegant">Quote Request Form</h2>
+                    <FileText className="w-8 h-8 text-white" />
+                    <h2 className="text-3xl font-elegant text-white font-elegant">Quote Request Form</h2>
                   </div>
                   <p className="text-white/70">
                     Fill out the form below with as much detail as possible to help us provide an accurate quote.
@@ -171,7 +171,7 @@ export default function QuotePage() {
                         value={formData?.fullName ?? ''}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-luxury-bg border border-luxury-gold/30 rounded-lg text-white placeholder-slate-500 focus:border-luxury-gold focus:ring-2 focus:ring-amber-500/20 transition-colors"
+                        className="w-full px-4 py-3 bg-black border border-white/30 rounded-lg text-white placeholder-slate-500 focus:border-white focus:ring-2 focus:ring-white/20 transition-colors"
                         placeholder="John Smith"
                       />
                     </div>
@@ -186,7 +186,7 @@ export default function QuotePage() {
                         name="businessName"
                         value={formData?.businessName ?? ''}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-luxury-bg border border-luxury-gold/30 rounded-lg text-white placeholder-slate-500 focus:border-luxury-gold focus:ring-2 focus:ring-amber-500/20 transition-colors"
+                        className="w-full px-4 py-3 bg-black border border-white/30 rounded-lg text-white placeholder-slate-500 focus:border-white focus:ring-2 focus:ring-white/20 transition-colors"
                         placeholder="ABC Company Ltd."
                       />
                     </div>
@@ -204,7 +204,7 @@ export default function QuotePage() {
                         value={formData?.email ?? ''}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-luxury-bg border border-luxury-gold/30 rounded-lg text-white placeholder-slate-500 focus:border-luxury-gold focus:ring-2 focus:ring-amber-500/20 transition-colors"
+                        className="w-full px-4 py-3 bg-black border border-white/30 rounded-lg text-white placeholder-slate-500 focus:border-white focus:ring-2 focus:ring-white/20 transition-colors"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -220,14 +220,14 @@ export default function QuotePage() {
                         value={formData?.phone ?? ''}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-luxury-bg border border-luxury-gold/30 rounded-lg text-white placeholder-slate-500 focus:border-luxury-gold focus:ring-2 focus:ring-amber-500/20 transition-colors"
+                        className="w-full px-4 py-3 bg-black border border-white/30 rounded-lg text-white placeholder-slate-500 focus:border-white focus:ring-2 focus:ring-white/20 transition-colors"
                         placeholder="(123) 456-7890"
                       />
                     </div>
                   </div>
 
                   {/* Service Details */}
-                  <div className="border-t border-luxury-gold/20 pt-6">
+                  <div className="border-t border-white/20 pt-6">
                     <h3 className="text-xl font-elegant text-white mb-4">Service Requirements</h3>
 
                     <div className="space-y-6">
@@ -241,7 +241,7 @@ export default function QuotePage() {
                           value={formData?.serviceType ?? ''}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 bg-luxury-bg border border-luxury-gold/30 rounded-lg text-white focus:border-luxury-gold focus:ring-2 focus:ring-amber-500/20 transition-colors"
+                          className="w-full px-4 py-3 bg-black border border-white/30 rounded-lg text-white focus:border-white focus:ring-2 focus:ring-white/20 transition-colors"
                         >
                           <option value="">Select a service...</option>
                           {serviceTypes?.map?.((type) => (
@@ -262,7 +262,7 @@ export default function QuotePage() {
                             name="dateNeeded"
                             value={formData?.dateNeeded ?? ''}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 bg-luxury-bg border border-luxury-gold/30 rounded-lg text-white placeholder-slate-500 focus:border-luxury-gold focus:ring-2 focus:ring-amber-500/20 transition-colors"
+                            className="w-full px-4 py-3 bg-black border border-white/30 rounded-lg text-white placeholder-slate-500 focus:border-white focus:ring-2 focus:ring-white/20 transition-colors"
                             placeholder="e.g., Dec 15, 2024 or ongoing"
                           />
                         </div>
@@ -277,7 +277,7 @@ export default function QuotePage() {
                             name="hoursRequired"
                             value={formData?.hoursRequired ?? ''}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 bg-luxury-bg border border-luxury-gold/30 rounded-lg text-white placeholder-slate-500 focus:border-luxury-gold focus:ring-2 focus:ring-amber-500/20 transition-colors"
+                            className="w-full px-4 py-3 bg-black border border-white/30 rounded-lg text-white placeholder-slate-500 focus:border-white focus:ring-2 focus:ring-white/20 transition-colors"
                             placeholder="e.g., 6-10pm, 24/7"
                           />
                         </div>
@@ -294,7 +294,7 @@ export default function QuotePage() {
                             name="numberOfGuards"
                             value={formData?.numberOfGuards ?? ''}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 bg-luxury-bg border border-luxury-gold/30 rounded-lg text-white placeholder-slate-500 focus:border-luxury-gold focus:ring-2 focus:ring-amber-500/20 transition-colors"
+                            className="w-full px-4 py-3 bg-black border border-white/30 rounded-lg text-white placeholder-slate-500 focus:border-white focus:ring-2 focus:ring-white/20 transition-colors"
                             placeholder="e.g., 2 guards"
                           />
                         </div>
@@ -309,7 +309,7 @@ export default function QuotePage() {
                             name="location"
                             value={formData?.location ?? ''}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 bg-luxury-bg border border-luxury-gold/30 rounded-lg text-white placeholder-slate-500 focus:border-luxury-gold focus:ring-2 focus:ring-amber-500/20 transition-colors"
+                            className="w-full px-4 py-3 bg-black border border-white/30 rounded-lg text-white placeholder-slate-500 focus:border-white focus:ring-2 focus:ring-white/20 transition-colors"
                             placeholder="Toronto, ON"
                           />
                         </div>
@@ -325,14 +325,14 @@ export default function QuotePage() {
                           value={formData?.additionalNotes ?? ''}
                           onChange={handleChange}
                           rows={5}
-                          className="w-full px-4 py-3 bg-luxury-bg border border-luxury-gold/30 rounded-lg text-white placeholder-slate-500 focus:border-luxury-gold focus:ring-2 focus:ring-amber-500/20 transition-colors resize-none"
+                          className="w-full px-4 py-3 bg-black border border-white/30 rounded-lg text-white placeholder-slate-500 focus:border-white focus:ring-2 focus:ring-white/20 transition-colors resize-none"
                           placeholder="Tell us more about your security needs, special requirements, or any other details that will help us provide an accurate quote..."
                         />
                       </div>
                     </div>
                   </div>
 
-                  <div className="text-sm text-white/70 p-4 bg-luxury-bg rounded-lg border-[1.5px] border-luxury-gold">
+                  <div className="text-sm text-white/70 p-4 bg-black rounded-lg border-[1.5px] border-white">
                     <p className="font-medium text-white/80 mb-1">Privacy Notice</p>
                     <p>Your information will be kept confidential and used only to provide you with a quote. We will not share your details with third parties.</p>
                   </div>
@@ -340,14 +340,14 @@ export default function QuotePage() {
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="w-full px-6 py-4 bg-luxury-gold hover:bg-luxury-gold disabled:bg-slate-700 disabled:cursor-not-allowed text-white text-lg font-semibold rounded-full-lg hover:shadow-amber-500/50 transition-all duration-300"
+                    className="w-full px-6 py-4 bg-white hover:bg-white disabled:bg-slate-700 disabled:cursor-not-allowed text-white text-lg font-semibold rounded-full-lg hover:shadow-white/10 transition-all duration-300"
                   >
                     {status === 'submitting' ? 'Submitting...' : 'Get My Quote'}
                   </button>
 
                   <p className="text-sm text-center text-white/70">
                     Need immediate assistance? Call us at{' '}
-                    <a href="tel:4374459542" className="text-luxury-gold hover:text-amber-400">  
+                    <a href="tel:4374459542" className="text-white hover:text-gray-300">  
                       (437) 445-9542
                     </a>
                   </p>
