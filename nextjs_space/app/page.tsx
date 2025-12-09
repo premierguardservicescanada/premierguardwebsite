@@ -29,15 +29,39 @@ export default function HomePage() {
 
   return (
     <div className="overflow-x-hidden bg-black">
-      {/* Hero Section - Full Width Image Only */}
-      <section className="relative h-screen w-full">
-        <Image
-          src="https://cdn.abacus.ai/images/f41a7422-4331-46c2-a872-30fbdc85291c.png"
-          alt="Premier Guard Services"
-          fill
-          className="object-cover"
-          priority
-        />
+      {/* Hero Section - Video for Mobile, Image for Desktop */}
+      <section className="relative h-screen w-full overflow-hidden">
+        {/* Desktop Image - Hidden on Mobile */}
+        <div className="hidden md:block absolute inset-0">
+          <Image
+            src="https://cdn.abacus.ai/images/f41a7422-4331-46c2-a872-30fbdc85291c.png"
+            alt="Premier Guard Services"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+
+        {/* Mobile Video - Hidden on Desktop */}
+        <div className="md:hidden absolute inset-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+            poster="https://cdn.abacus.ai/images/f41a7422-4331-46c2-a872-30fbdc85291c.png"
+          >
+            <source src="/hero-mobile.mp4" type="video/mp4" />
+            {/* Fallback to image if video doesn't load */}
+            <Image
+              src="https://cdn.abacus.ai/images/f41a7422-4331-46c2-a872-30fbdc85291c.png"
+              alt="Premier Guard Services"
+              fill
+              className="object-cover"
+            />
+          </video>
+        </div>
       </section>
 
       {/* Services - Horizontal Scroll with Arrows */}
