@@ -32,11 +32,11 @@ export default function Header() {
         scrolled ? 'bg-black/98 backdrop-blur-md border-b border-white/20' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-24 md:h-28">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <div className="relative w-56 h-16 md:w-72 md:h-20">
+      <div className="mx-auto px-4 lg:px-6">
+        <div className="flex items-center h-20 md:h-24">
+          {/* Logo - Extreme Left */}
+          <Link href="/" className="flex items-center flex-shrink-0">
+            <div className="relative w-48 h-14 md:w-56 md:h-16">
               <Image
                 src="https://cdn.abacus.ai/images/fbb7dfc1-475e-418b-b3ad-bef404ca9384.png"
                 alt="Premier Guard Services"
@@ -47,13 +47,13 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-10">
+          {/* Desktop Navigation - Pushed to Right */}
+          <nav className="hidden lg:flex items-center space-x-6 ml-auto mr-8">
             {navLinks?.map?.((link) => (
               <Link
                 key={link?.href ?? ''}
                 href={link?.href ?? '#'}
-                className="text-white hover:text-white font-body text-sm tracking-[0.2em] transition-colors duration-300"
+                className="text-white hover:text-white font-body text-sm tracking-[0.15em] transition-colors duration-300"
               >
                 {link?.label ?? ''}
               </Link>
@@ -64,7 +64,7 @@ export default function Header() {
           <div className="hidden lg:block">
             <Link
               href="/quote"
-              className="inline-block px-8 py-2.5 border-[1.5px] border-white text-white font-elegant text-sm tracking-wide hover:bg-white hover:text-black transition-all duration-300 rounded-full"
+              className="inline-block px-6 py-2 border-[1.5px] border-white text-white font-elegant text-sm tracking-wide hover:bg-white hover:text-black transition-all duration-300 rounded-full"
             >
               GET A QUOTE
             </Link>
@@ -73,7 +73,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-white hover:text-white transition-colors"
+            className="lg:hidden p-2 text-white hover:text-white transition-colors ml-auto"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
