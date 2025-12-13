@@ -15,6 +15,29 @@ const fadeInUp = {
 export default function HomePage() {
   const [servicesRef, servicesInView] = useInView({ triggerOnce: true, threshold: 0.2 })
   const scrollContainerRef = useRef<HTMLDivElement>(null)
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  const mobileVideos = [
+    '/hero-mobile.mp4',
+    '/hero-mobile-alt1.mp4',
+    '/hero-mobile-alt2.mp4'
+  ]
+
+  // Handle video end to cycle to next video
+  const handleVideoEnd = () => {
+    setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % mobileVideos.length)
+  }
+
+  // Update video source when index changes
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.load()
+      videoRef.current.play().catch((error) => {
+        console.log('Video autoplay failed:', error)
+      })
+    }
+  }, [currentVideoIndex])
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
@@ -42,17 +65,18 @@ export default function HomePage() {
           />
         </div>
 
-        {/* Mobile Video - Hidden on Desktop */}
+        {/* Mobile Video Carousel - Hidden on Desktop */}
         <div className="md:hidden absolute inset-0">
           <video
+            ref={videoRef}
             autoPlay
-            loop
             muted
             playsInline
+            onEnded={handleVideoEnd}
             className="w-full h-full object-cover"
             poster="https://cdn.abacus.ai/images/f41a7422-4331-46c2-a872-30fbdc85291c.png"
           >
-            <source src="/hero-mobile.mp4" type="video/mp4" />
+            <source src={mobileVideos[currentVideoIndex]} type="video/mp4" />
             {/* Fallback to image if video doesn't load */}
             <Image
               src="https://cdn.abacus.ai/images/f41a7422-4331-46c2-a872-30fbdc85291c.png"
