@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 import { FileText, CheckCircle2, Calendar } from 'lucide-react'
 
 const fadeInUp = {
@@ -22,7 +21,6 @@ const serviceTypes = [
 ]
 
 export default function QuotePage() {
-  const [formRef, formInView] = useInView({ triggerOnce: true, threshold: 0.2 })
   const [formData, setFormData] = useState({
     fullName: '',
     businessName: '',
@@ -113,13 +111,7 @@ export default function QuotePage() {
       {/* Quote Form */}
       <section className="bg-black py-20">
         <div className="max-w-4xl mx-auto px-6">
-          <motion.div
-            ref={formRef}
-            initial="hidden"
-            animate={formInView ? 'visible' : 'hidden'}
-            variants={fadeInUp}
-            className="bg-black p-8 md:p-12 rounded-lg border-[1.5px] border-white shadow-2xl"
-          >
+          <div className="bg-black p-8 md:p-12 rounded-lg border-[1.5px] border-white shadow-2xl">
             {status === 'success' ? (
               <div className="text-center py-12">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-green-900/30 border-2 border-green-600 rounded-full mb-6">
@@ -354,7 +346,7 @@ export default function QuotePage() {
                 </form>
               </>
             )}
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

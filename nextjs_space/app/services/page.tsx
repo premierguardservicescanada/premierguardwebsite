@@ -103,13 +103,12 @@ const services = [
 ]
 
 export default function ServicesPage() {
-  const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.2 })
-  const [servicesRef, servicesInView] = useInView({ triggerOnce: true, threshold: 0.1 })
+  const [servicesRef, servicesInView] = useInView({ triggerOnce: true, threshold: 0.05 })
 
   return (
     <div className="overflow-x-hidden">
-      {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-[50vh] flex items-center justify-center bg-black">
+      {/* Hero Section - Always Visible */}
+      <section className="relative min-h-[50vh] flex items-center justify-center bg-black">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://cdn.abacus.ai/images/221138cf-fd6b-43b2-94ad-8e4d362bde63.png"
@@ -121,30 +120,15 @@ export default function ServicesPage() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 py-20 text-center">
-          <motion.h2
-            initial="hidden"
-            animate={heroInView ? 'visible' : 'hidden'}
-            variants={fadeInUp}
-            className="text-2xl md:text-3xl font-elegant mb-4 text-white tracking-wide"
-          >
+          <h2 className="text-2xl md:text-3xl font-elegant mb-4 text-white tracking-wide">
             PREMIER GUARD SERVICES
-          </motion.h2>
-          <motion.h1
-            initial="hidden"
-            animate={heroInView ? 'visible' : 'hidden'}
-            variants={fadeInUp}
-            className="text-5xl md:text-6xl font-elegant mb-6 text-white"
-          >
+          </h2>
+          <h1 className="text-5xl md:text-6xl font-elegant mb-6 text-white">
             Our <span className="text-white">Security Services</span>
-          </motion.h1>
-          <motion.p
-            initial="hidden"
-            animate={heroInView ? 'visible' : 'hidden'}
-            variants={fadeInUp}
-            className="text-xl text-white/80 max-w-2xl mx-auto"
-          >
+          </h1>
+          <p className="text-xl text-white/80 max-w-2xl mx-auto">
             Comprehensive luxury security solutions tailored to meet your specific needs across Canada
-          </motion.p>
+          </p>
         </div>
       </section>
 

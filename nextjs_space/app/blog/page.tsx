@@ -25,38 +25,22 @@ const blogPosts = [
 ]
 
 export default function BlogPage() {
-  const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.2 })
-  const [postsRef, postsInView] = useInView({ triggerOnce: true, threshold: 0.2 })
+  const [postsRef, postsInView] = useInView({ triggerOnce: true, threshold: 0.05 })
 
   return (
     <div className="overflow-x-hidden">
-      {/* Hero Section */}
-      <section ref={heroRef} className="bg-black py-20">
+      {/* Hero Section - Always Visible */}
+      <section className="bg-black py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.h2
-            initial="hidden"
-            animate={heroInView ? 'visible' : 'hidden'}
-            variants={fadeInUp}
-            className="text-2xl md:text-3xl font-elegant mb-4 text-white tracking-wide"
-          >
+          <h2 className="text-2xl md:text-3xl font-elegant mb-4 text-white tracking-wide">
             PREMIER GUARD SERVICES
-          </motion.h2>
-          <motion.h1
-            initial="hidden"
-            animate={heroInView ? 'visible' : 'hidden'}
-            variants={fadeInUp}
-            className="text-5xl md:text-6xl font-elegant mb-6 text-white"
-          >
+          </h2>
+          <h1 className="text-5xl md:text-6xl font-elegant mb-6 text-white">
             Security <span className="text-white">Insights</span>
-          </motion.h1>
-          <motion.p
-            initial="hidden"
-            animate={heroInView ? 'visible' : 'hidden'}
-            variants={fadeInUp}
-            className="text-xl text-white/80"
-          >
+          </h1>
+          <p className="text-xl text-white/80">
             Expert tips, industry insights, and security best practices from the Premier Guard team
-          </motion.p>
+          </p>
         </div>
       </section>
 

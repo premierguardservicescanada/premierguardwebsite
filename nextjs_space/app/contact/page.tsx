@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 import { Phone, Mail, MapPin, Instagram, Send, CheckCircle2 } from 'lucide-react'
 
 const fadeInUp = {
@@ -11,7 +10,6 @@ const fadeInUp = {
 }
 
 export default function ContactPage() {
-  const [formRef, formInView] = useInView({ triggerOnce: true, threshold: 0.2 })
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -87,12 +85,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
-            <motion.div
-              initial="hidden"
-              animate={formInView ? 'visible' : 'hidden'}
-              variants={fadeInUp}
-              className="space-y-8"
-            >
+            <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-elegant mb-6 text-white font-elegant">
                   Contact <span className="text-white">Information</span>
@@ -173,15 +166,10 @@ export default function ContactPage() {
                   After-hours calls welcome for emergencies
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Contact Form */}
-            <motion.div
-              ref={formRef}
-              initial="hidden"
-              animate={formInView ? 'visible' : 'hidden'}
-              variants={fadeInUp}
-            >
+            <div>
               <div className="bg-black p-8 rounded-lg border-[1.5px] border-white shadow-2xl">
                 <h2 className="text-3xl font-elegant mb-6 text-white font-elegant">
                   Send us a <span className="text-white">Message</span>
@@ -285,7 +273,7 @@ export default function ContactPage() {
                   </button>
                 </form>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
