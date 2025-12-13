@@ -44,7 +44,6 @@ export default function AboutPage() {
   const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.2 })
   const [missionRef, missionInView] = useInView({ triggerOnce: true, threshold: 0.2 })
   const [valuesRef, valuesInView] = useInView({ triggerOnce: true, threshold: 0.2 })
-  const [whyRef, whyInView] = useInView({ triggerOnce: true, threshold: 0.2 })
   const [whyUsRef, whyUsInView] = useInView({ triggerOnce: true, threshold: 0.2 })
   const [testimonialsRef, testimonialsInView] = useInView({ triggerOnce: true, threshold: 0.2 })
 
@@ -90,26 +89,23 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Mission & Story - Consolidated */}
       <section ref={missionRef} className="bg-black py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             <motion.div
               initial="hidden"
               animate={missionInView ? 'visible' : 'hidden'}
               variants={fadeInUp}
             >
-              <h2 className="text-4xl font-elegant mb-6 text-white font-elegant">
-                Our <span className="text-white">Mission</span>
+              <h2 className="text-4xl font-elegant mb-6 text-white">
+                Our Mission
               </h2>
               <p className="text-lg text-white/80 mb-4">
-                At Premier Guard Services Corp., our mission is simple yet powerful: to deliver exceptional security services that protect what matters most to our clients.
-              </p>
-              <p className="text-lg text-white/80 mb-4">
-                We understand that safety and security are not just services—they're fundamental needs. That's why we've built our company on a foundation of professionalism, reliability, and unwavering commitment to excellence.
+                To deliver exceptional security services that protect what matters most to our clients. We've built our company on professionalism, reliability, and unwavering commitment to excellence.
               </p>
               <p className="text-lg text-white/80">
-                As a locally-operated company serving across Canada, we take pride in being accessible, responsive, and personally invested in every client's security needs.
+                As a locally-operated company serving across Canada, we provide the personal attention and customized solutions that larger corporations simply can't match.
               </p>
             </motion.div>
 
@@ -121,18 +117,13 @@ export default function AboutPage() {
             >
               <Image
                 src="https://cdn.abacus.ai/images/f8b93c6f-67ec-4487-ae42-5c03e00ea495.png"
-                alt="Professional concierge security"
+                alt="Professional security team"
                 fill
                 className="object-cover"
               />
             </motion.div>
           </div>
-        </div>
-      </section>
 
-      {/* Company Story */}
-      <section className="bg-black py-20">
-        <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial="hidden"
@@ -154,17 +145,14 @@ export default function AboutPage() {
               variants={fadeInUp}
               className="order-1 md:order-2"
             >
-              <h2 className="text-4xl font-elegant mb-6 text-white font-elegant">
-                Our <span className="text-white">Story</span>
+              <h2 className="text-4xl font-elegant mb-6 text-white">
+                Our Experience
               </h2>
               <p className="text-lg text-white/80 mb-4">
-                Premier Guard Services Corp. was founded with a clear vision: to fill the gap in the Canadian security market for a luxury company that combines professional excellence with personalized service.
-              </p>
-              <p className="text-lg text-white/80 mb-4">
-                Our team brings years of experience in security operations, law enforcement, and customer service. We've seen firsthand what works—and what doesn't—in the security industry.
+                Our team brings years of experience in security operations, law enforcement, and customer service. We understand what works in the security industry.
               </p>
               <p className="text-lg text-white/80">
-                Today, we're proud to serve a diverse range of clients across Canada, from small businesses to large corporate events, construction sites to retail establishments. Every client receives the same commitment to excellence and personalized attention.
+                Today, we serve a diverse range of clients across Canada—from corporate events and construction sites to retail establishments. Every client receives our full commitment to excellence.
               </p>
             </motion.div>
           </div>
@@ -230,115 +218,24 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why Trust Us */}
-      <section ref={whyRef} className="bg-black py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial="hidden"
-            animate={whyInView ? 'visible' : 'hidden'}
-            variants={fadeInUp}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl md:text-5xl font-elegant mb-4 text-white font-elegant">
-              Why Clients <span className="text-white">Trust Us</span>
-            </h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              Experience the Premier Guard difference
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            animate={whyInView ? 'visible' : 'hidden'}
-            variants={staggerContainer}
-            className="grid md:grid-cols-2 gap-6 mb-12"
-          >
-            {[
-              {
-                icon: Award,
-                title: 'Licensed & Certified',
-                desc: 'All our guards hold valid Ontario Security Licenses and undergo rigorous background checks. We maintain full insurance coverage for your complete peace of mind.'
-              },
-              {
-                icon: Users,
-                title: 'Professionally Trained',
-                desc: 'Our team receives comprehensive training in security protocols, customer service, conflict resolution, and emergency response. Continuous education keeps skills sharp.'
-              },
-              {
-                icon: Clock,
-                title: 'Fast & Flexible',
-                desc: 'Need security on short notice? We specialize in rapid deployment and flexible scheduling. Whether it\'s an emergency or planned event, we\'re ready when you need us.'
-              },
-              {
-                icon: Shield,
-                title: 'Personalized Service',
-                desc: 'As a locally-operated company, we provide the personal attention and customized solutions that larger corporations simply can\'t match. Every client is a priority.'
-              }
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                variants={fadeInUp}
-                className="bg-black p-6 rounded-lg border-[1.5px] border-white hover:border-white transition-colors"
-              >
-                <div className="flex items-start gap-4">
-                  <item.icon className="w-12 h-12 text-white flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
-                    <p className="text-white/70">{item.desc}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {/* Certifications */}
-          <motion.div
-            initial="hidden"
-            animate={whyInView ? 'visible' : 'hidden'}
-            variants={fadeInUp}
-            className="bg-black p-8 rounded-lg border-[1.5px] border-white"
-          >
-            <h3 className="text-2xl font-elegant mb-6 text-center text-white font-elegant">
-              Licenses & <span className="text-white">Certifications</span>
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {[
-                'Ontario Security License',
-                'First-Aid Certified',
-                'WSIB Compliant',
-                'Liability Insurance'
-              ].map((cert, idx) => (
-                <div
-                  key={idx}
-                  className="flex flex-col items-center gap-2 p-4 bg-black rounded-lg border border-white/30"
-                >
-                  <CheckCircle2 className="w-8 h-8 text-white" />
-                  <span className="text-sm text-center text-white/80">{cert}</span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Why Choose Premier Guard */}
+      {/* Why Choose Premier Guard - Consolidated Section */}
       <section ref={whyUsRef} className="bg-black py-24 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial="hidden"
             animate={whyUsInView ? 'visible' : 'hidden'}
             variants={fadeInUp}
-            className="text-center mb-20"
+            className="text-center mb-16"
           >
             <h2 className="text-5xl md:text-6xl font-elegant text-white tracking-wide mb-4">
               WHY CHOOSE PREMIER GUARD
             </h2>
             <p className="text-lg text-white/60 tracking-wider">
-              LUXURY SECURITY, PROFESSIONAL EXCELLENCE
+              PROFESSIONAL EXCELLENCE YOU CAN TRUST
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
+          <div className="grid md:grid-cols-2 gap-16 items-center mb-16">
             <motion.div
               initial="hidden"
               animate={whyUsInView ? 'visible' : 'hidden'}
@@ -357,13 +254,13 @@ export default function AboutPage() {
               initial="hidden"
               animate={whyUsInView ? 'visible' : 'hidden'}
               variants={staggerContainer}
-              className="space-y-6"
+              className="space-y-5"
             >
               {[
                 'Licensed & Insured Guards',
                 'Professionally Trained Personnel',
-                'Fast Response Times',
-                'Professional Appearance & Conduct',
+                'Fast Response & Deployment',
+                'Professional Appearance',
                 'Flexible Contract Terms',
                 'Personalized Service',
                 'Competitive Pricing'
@@ -374,7 +271,7 @@ export default function AboutPage() {
                   className="flex items-center gap-4 group"
                 >
                   <div className="w-1.5 h-1.5 bg-white" />
-                  <span className="text-white text-lg tracking-wide group-hover:text-white transition-colors duration-300">
+                  <span className="text-white text-lg tracking-wide">
                     {item}
                   </span>
                 </motion.div>
@@ -387,7 +284,7 @@ export default function AboutPage() {
             initial="hidden"
             animate={whyUsInView ? 'visible' : 'hidden'}
             variants={staggerContainer}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-b border-white/10 py-16"
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-16 mb-16"
           >
             {[
               { end: 500, suffix: '+', label: 'EVENTS SECURED' },
@@ -406,6 +303,34 @@ export default function AboutPage() {
                 <div className="text-white/60 text-sm tracking-widest">{stat.label}</div>
               </motion.div>
             ))}
+          </motion.div>
+
+          {/* Certifications */}
+          <motion.div
+            initial="hidden"
+            animate={whyUsInView ? 'visible' : 'hidden'}
+            variants={fadeInUp}
+            className="bg-black p-8 rounded-lg border-[1.5px] border-white"
+          >
+            <h3 className="text-2xl font-elegant mb-6 text-center text-white">
+              LICENSES & CERTIFICATIONS
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {[
+                'Ontario Security License',
+                'First-Aid Certified',
+                'WSIB Compliant',
+                'Liability Insurance'
+              ].map((cert, idx) => (
+                <div
+                  key={idx}
+                  className="flex flex-col items-center gap-2 p-4 bg-black rounded-lg border border-white/30"
+                >
+                  <CheckCircle2 className="w-8 h-8 text-white" />
+                  <span className="text-sm text-center text-white/80">{cert}</span>
+                </div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
