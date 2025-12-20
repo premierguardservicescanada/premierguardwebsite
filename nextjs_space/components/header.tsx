@@ -38,11 +38,10 @@ export default function Header() {
           <Link href="/" className="flex items-center flex-shrink-0">
             <div className="relative w-56 h-16 md:w-72 md:h-20">
               <Image
-                src="https://cdn.abacus.ai/images/fbb7dfc1-475e-418b-b3ad-bef404ca9384.png"
+                src="/logo.jpg"
                 alt="Premier Guard Services"
                 fill
-                className="object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.4)] transition-all duration-300"
-                style={{ filter: 'brightness(1.05) contrast(1.1)' }}
+                className="object-contain mix-blend-screen opacity-95 hover:opacity-100 transition-opacity duration-300"
                 priority
               />
             </div>
