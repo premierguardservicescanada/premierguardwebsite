@@ -38,10 +38,10 @@ export default function Header() {
           <Link href="/" className="flex items-center flex-shrink-0">
             <div className="relative w-56 h-16 md:w-72 md:h-20">
               <Image
-                src="/logo.jpg"
+                src="/logo.png"
                 alt="Premier Guard Services"
                 fill
-                className="object-contain mix-blend-screen opacity-95 hover:opacity-100 transition-opacity duration-300"
+                className="object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity duration-300"
                 priority
               />
             </div>
