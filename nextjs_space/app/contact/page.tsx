@@ -247,8 +247,8 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 bg-black border border-white/30 rounded-lg text-white placeholder-slate-500 focus:border-white focus:ring-2 focus:ring-white/20 transition-colors resize-none"
-                      placeholder="Tell us about your security needs..."
+                      className="w-full px-4 py-3 bg-black border border-white/30 rounded-lg text-white placeholder-white/40 focus:border-white focus:ring-2 focus:ring-white/20 transition-colors resize-none"
+                      placeholder="Tell us about your security needs, preferred service type, location, and any specific requirements..."
                     />
                   </div>
 
