@@ -332,9 +332,9 @@ export default function QuotePage() {
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="w-full px-6 py-4 bg-white hover:bg-white disabled:bg-slate-700 disabled:cursor-not-allowed text-white text-lg font-semibold rounded-full-lg hover:shadow-white/10 transition-all duration-300"
+                    className="w-full px-6 py-4 bg-white hover:bg-gray-100 disabled:bg-slate-700 disabled:cursor-not-allowed text-black hover:text-black disabled:text-white text-lg font-semibold rounded-lg hover:shadow-lg hover:shadow-white/10 transition-all duration-300"
                   >
-                    {status === 'submitting' ? 'Submitting...' : 'Get My Quote'}
+                    {status === 'submitting' ? 'Submitting...' : 'Get QUOTE'}
                   </button>
 
                   <p className="text-sm text-center text-white/70">
