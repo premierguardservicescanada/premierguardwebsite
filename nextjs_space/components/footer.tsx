@@ -10,16 +10,18 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
-          <div>
-            <div className="relative w-56 h-20 mb-6">
-              <Image
-                src="https://cdn.abacus.ai/images/fbb7dfc1-475e-418b-b3ad-bef404ca9384.png"
-                alt="Premier Guard Services"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <p className="text-white/70 mb-6 font-body leading-relaxed">
+          <div className="flex flex-col items-center md:items-start">
+            <Link href="/" className="mb-6">
+              <div className="relative w-56 h-16 md:w-72 md:h-20">
+                <Image
+                  src="/logo.png"
+                  alt="Premier Guard Services"
+                  fill
+                  className="object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+            </Link>
+            <p className="text-white/70 mb-6 font-body leading-relaxed text-center md:text-left">
               Luxury professional security services across Canada.
             </p>
             <a
