@@ -260,7 +260,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-white hover:bg-white disabled:bg-slate-700 disabled:cursor-not-allowed text-white font-semibold rounded-full-lg hover:shadow-white/10 transition-all duration-300"
+                    className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-white hover:bg-gray-100 disabled:bg-slate-700 disabled:cursor-not-allowed text-black hover:text-black disabled:text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-white/10 transition-all duration-300"
                   >
                     {status === 'submitting' ? (
                       'Sending...'
