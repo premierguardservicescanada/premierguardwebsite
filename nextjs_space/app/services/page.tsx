@@ -26,7 +26,7 @@ const services = [
       'Emergency response protocols',
       'Professional appearance and conduct'
     ],
-    image: 'https://cdn.abacus.ai/images/6fec69ff-a487-440c-a0d4-be33803c68eb.png'
+    image: '/event-security.jpg'
   },
   {
     icon: ShoppingBag,
@@ -38,7 +38,7 @@ const services = [
       'Theft deterrence and detection',
       'Incident documentation and reporting'
     ],
-    image: 'https://cdn.abacus.ai/images/69cf0aa9-cc82-48d0-aa7b-4fde2536de49.png'
+    image: '/retail-security.jpg'
   },
   {
     icon: HardHat,
@@ -50,7 +50,7 @@ const services = [
       'Equipment and material protection',
       'Regular patrol and inspection'
     ],
-    image: 'https://cdn.abacus.ai/images/3834d5ed-af53-4c6a-9a04-f8551c9337be.png'
+    image: '/construction-security.jpg'
   },
   {
     icon: Car,
@@ -62,7 +62,7 @@ const services = [
       'Property checks and lock-ups',
       'Detailed patrol reports'
     ],
-    image: 'https://cdn.abacus.ai/images/da3a2b19-c38b-4e13-b456-66e24bb39c1f.png'
+    image: '/mobile-patrol.jpg'
   },
   {
     icon: Building2,
@@ -74,7 +74,7 @@ const services = [
       'Package handling and delivery',
       'Building access control'
     ],
-    image: 'https://cdn.abacus.ai/images/9af5107f-c8b2-4167-a5e9-ef9dff868473.png'
+    image: '/concierge-security.jpg'
   },
   {
     icon: Zap,
@@ -86,7 +86,7 @@ const services = [
       'Flexible duration options',
       'Crisis management support'
     ],
-    image: 'https://cdn.abacus.ai/images/1a82b039-ca63-407a-9862-3669d5e5c609.png'
+    image: '/24-7-coverage.jpg'
   },
   {
     icon: Clock,
@@ -98,7 +98,7 @@ const services = [
       'Holiday and weekend availability',
       'Consistent quality across all shifts'
     ],
-    image: 'https://cdn.abacus.ai/images/fdc4a72d-cf61-4528-9600-2e08c2dfcdbb.png'
+    image: '/24-7-coverage.jpg'
   }
 ]
 

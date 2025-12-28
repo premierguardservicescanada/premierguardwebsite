@@ -134,32 +134,32 @@ export default function HomePage() {
                 {
                   title: 'Private Event Security',
                   desc: 'Professional security for events',
-                  image: 'https://cdn.abacus.ai/images/85bae8af-6026-43b4-9d5e-c9e3134a2319.png'
+                  image: '/event-security.jpg'
                 },
                 {
                   title: 'Retail Security',
                   desc: 'Loss prevention & customer safety',
-                  image: 'https://cdn.abacus.ai/images/733c7fe2-e931-4b45-9fc6-3cf39f8e4815.png'
+                  image: '/retail-security.jpg'
                 },
                 {
                   title: 'Construction Site Security',
                   desc: '24/7 site protection',
-                  image: 'https://cdn.abacus.ai/images/5fcf3f94-6333-49f6-8cce-ab10f1a495a9.png'
+                  image: '/construction-security.jpg'
                 },
                 {
                   title: 'Mobile Patrol',
                   desc: 'Regular patrol services',
-                  image: 'https://cdn.abacus.ai/images/7eb30b6c-21fc-4d26-9d7f-894ca98389ee.png'
+                  image: '/mobile-patrol.jpg'
                 },
                 {
                   title: 'Concierge Security',
                   desc: 'Professional reception services',
-                  image: 'https://cdn.abacus.ai/images/d75a4be0-0a0c-4400-a924-05186f1dec6b.png'
+                  image: '/concierge-security.jpg'
                 },
                 {
                   title: '24/7 Coverage',
                   desc: 'Round-the-clock protection',
-                  image: 'https://cdn.abacus.ai/images/800a6277-2773-4bc3-9fb9-ab2b65e25236.png'
+                  image: '/24-7-coverage.jpg'
                 }
               ].map((service, idx) => (
                 <div
