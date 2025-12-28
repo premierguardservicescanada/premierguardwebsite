@@ -244,7 +244,7 @@ export default function ServicesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/quote"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-white font-semibold rounded-full-lg hover:bg-slate-100 transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-black hover:text-black font-semibold rounded-lg hover:bg-gray-100 hover:shadow-lg transition-all duration-300"
             >
               Request a Quote
               <ArrowRight className="w-5 h-5" />
