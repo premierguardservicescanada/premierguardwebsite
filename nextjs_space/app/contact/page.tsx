@@ -23,16 +23,15 @@ export default function ContactPage() {
     setStatus('submitting')
 
     try {
-      const response = await fetch('/api/contact', {
+      // Using no-cors mode to bypass CORS restrictions with Google Apps Script
+      await fetch('https://script.google.com/macros/s/AKfycbzUHqYmz34wSNiEdNViozKLpHjcJuM4NWp0ayS8uF1ev_ta4aC_sGQRc544YRbmcBe6/exec', {
         method: 'POST',
+        mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       })
 
-      if (!response?.ok) {
-        throw new Error('Failed to submit')
-      }
-
+      // With no-cors mode, we can't check the response, so assume success
       setStatus('success')
       setFormData({ name: '', email: '', phone: '', message: '' })
       

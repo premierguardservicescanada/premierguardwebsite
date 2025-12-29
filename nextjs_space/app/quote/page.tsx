@@ -40,16 +40,15 @@ export default function QuotePage() {
     setStatus('submitting')
 
     try {
-      const response = await fetch('/api/quote', {
+      // Using no-cors mode to bypass CORS restrictions with Google Apps Script
+      await fetch('https://script.google.com/macros/s/AKfycbwngIv8_OA5Uj-_Ocq3KS6wVbzx9qHA9xXhIChYv-sYpykhVvMmIJwD1fxZekl39VrW/exec', {
         method: 'POST',
+        mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       })
 
-      if (!response?.ok) {
-        throw new Error('Failed to submit')
-      }
-
+      // With no-cors mode, we can't check the response, so assume success
       setStatus('success')
       setFormData({
         fullName: '',
