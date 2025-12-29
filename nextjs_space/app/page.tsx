@@ -32,12 +32,26 @@ export default function HomePage() {
   // Update video source when index changes
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.load()
-      videoRef.current.play().catch((error) => {
-        console.log('Video autoplay failed:', error)
-      })
+      const video = videoRef.current
+      video.load()
+      
+      // Wait for video to be ready before playing
+      const playPromise = video.play()
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            console.log('Video playing:', mobileVideos[currentVideoIndex])
+          })
+          .catch((error) => {
+            console.error('Video autoplay failed:', error)
+            // Retry playing after a short delay
+            setTimeout(() => {
+              video.play().catch(e => console.error('Retry failed:', e))
+            }, 100)
+          })
+      }
     }
-  }, [currentVideoIndex])
+  }, [currentVideoIndex, mobileVideos])
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
@@ -68,6 +82,7 @@ export default function HomePage() {
         {/* Mobile Video Carousel - Hidden on Desktop */}
         <div className="md:hidden absolute inset-0">
           <video
+            key={currentVideoIndex}
             ref={videoRef}
             autoPlay
             muted
