@@ -86,7 +86,7 @@ const services = [
       'Flexible duration options',
       'Crisis management support'
     ],
-    image: '/24-7-coverage.jpg'
+    image: '/emergency-security.jpg'
   },
   {
     icon: Clock,
