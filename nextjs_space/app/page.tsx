@@ -16,7 +16,10 @@ export default function HomePage() {
   const [servicesRef, servicesInView] = useInView({ triggerOnce: true, threshold: 0.2 })
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
+  const [nextVideoIndex, setNextVideoIndex] = useState(1)
+  const [isTransitioning, setIsTransitioning] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
+  const nextVideoRef = useRef<HTMLVideoElement>(null)
 
   const mobileVideos = [
     '/hero-mobile.mp4',
@@ -24,20 +27,24 @@ export default function HomePage() {
     '/hero-mobile-alt2.mp4'
   ]
 
-  // Handle video end to cycle to next video
+  // Handle video end to cycle to next video with fade transition
   const handleVideoEnd = () => {
-    setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % mobileVideos.length)
+    setIsTransitioning(true)
+    
+    // Start fade transition
+    setTimeout(() => {
+      setCurrentVideoIndex(nextVideoIndex)
+      setNextVideoIndex((nextVideoIndex + 1) % mobileVideos.length)
+      setIsTransitioning(false)
+    }, 700) // Match this with CSS transition duration (duration-700)
   }
 
-  // Update video source when index changes
+  // Preload and prepare next video
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.load()
-      videoRef.current.play().catch((error) => {
-        console.log('Video autoplay failed:', error)
-      })
+    if (nextVideoRef.current) {
+      nextVideoRef.current.load()
     }
-  }, [currentVideoIndex])
+  }, [nextVideoIndex])
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
@@ -67,13 +74,16 @@ export default function HomePage() {
 
         {/* Mobile Video Carousel - Hidden on Desktop */}
         <div className="md:hidden absolute inset-0">
+          {/* Current Video */}
           <video
             ref={videoRef}
             autoPlay
             muted
             playsInline
             onEnded={handleVideoEnd}
-            className="w-full h-full object-cover"
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
+              isTransitioning ? 'opacity-0' : 'opacity-100'
+            }`}
             poster="https://cdn.abacus.ai/images/f41a7422-4331-46c2-a872-30fbdc85291c.png"
           >
             <source src={mobileVideos[currentVideoIndex]} type="video/mp4" />
@@ -84,6 +94,19 @@ export default function HomePage() {
               fill
               className="object-cover"
             />
+          </video>
+          
+          {/* Next Video (Preloaded for smooth transition) */}
+          <video
+            ref={nextVideoRef}
+            muted
+            playsInline
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
+              isTransitioning ? 'opacity-100' : 'opacity-0'
+            }`}
+            style={{ pointerEvents: 'none' }}
+          >
+            <source src={mobileVideos[nextVideoIndex]} type="video/mp4" />
           </video>
         </div>
       </section>
